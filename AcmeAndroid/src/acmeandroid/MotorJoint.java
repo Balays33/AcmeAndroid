@@ -22,7 +22,7 @@ public class MotorJoint {
     double currentRotation;
     final double maximumFlexion;
     double currentFlexion;
-    double energyConsumption;
+    final double energyConsumption;
 
     public MotorJoint(double maximumRotation, double currentRotation, double maximumFlexion, double currentFlexion, double energyConsumption) {
         this.maximumRotation = maximumRotation;

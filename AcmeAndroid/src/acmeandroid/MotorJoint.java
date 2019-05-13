@@ -18,11 +18,21 @@ package acmeandroid;
  */
 public class MotorJoint {
     
+<<<<<<< HEAD
     final double maximumRotation;
     double currentRotation;
     final double maximumFlexion;
     double currentFlexion;
     final double energyConsumption;
+=======
+    private final double maximumRotation;
+    private double currentRotation;
+    private final double maximumFlexion;
+    private double currentFlexion;
+    double energyConsumption;
+    private double motorCurrentPosition;
+    private double motorCurrentFlexion; // gettter and setter
+>>>>>>> 6b1387d9f1cfea5ba8a2b127b21401e5536dd53e
 
     public MotorJoint(double maximumRotation, double currentRotation, double maximumFlexion, double currentFlexion, double energyConsumption) {
         this.maximumRotation = maximumRotation;

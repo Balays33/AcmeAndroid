@@ -8,37 +8,25 @@ package acmeandroid;
 
 /**
  *
- * @authors 
- * Jhoms Mosquera
- * Eduardo Nakashima
- * Balazs Barcza
- * Javier Lopez Santacruz Serraller
- * Michał Świtała
+ * @author Jhoms Mosquera
+ * @author Eduardo Nakashima
+ * @author Balazs Barcza
+ * @author Javier Lopez Santacruz Serraller
+ * @author Michał Świtała
  * 
  */
 public class MotorJoint {
     
-<<<<<<< HEAD
-    final double maximumRotation;
-    double currentRotation;
-    final double maximumFlexion;
-    double currentFlexion;
-    final double energyConsumption;
-=======
     private final double maximumRotation;
-    private double currentRotation;
     private final double maximumFlexion;
+    private final double energyConsumption;
+    private double currentRotation;
     private double currentFlexion;
-    double energyConsumption;
-    private double motorCurrentPosition;
-    private double motorCurrentFlexion; // gettter and setter
->>>>>>> 6b1387d9f1cfea5ba8a2b127b21401e5536dd53e
+    // gettter and setter
 
-    public MotorJoint(double maximumRotation, double currentRotation, double maximumFlexion, double currentFlexion, double energyConsumption) {
+    public MotorJoint(double maximumRotation, double maximumFlexion, double energyConsumption) {
         this.maximumRotation = maximumRotation;
-        this.currentRotation = currentRotation;
         this.maximumFlexion = maximumFlexion;
-        this.currentFlexion = currentFlexion;
         this.energyConsumption = energyConsumption;
     }
 
@@ -68,10 +56,6 @@ public class MotorJoint {
 
     public void setCurrentFlexion(double currentFlexion) {
         this.currentFlexion = currentFlexion;
-    }
-
-    public void setEnergyConsumption(double energyConsumption) {
-        this.energyConsumption = energyConsumption;
     }
 
     @Override

@@ -7,34 +7,29 @@ package acmeandroid;
 
 /**
  *
- * @authors 
- * Jhoms Mosquera
- * Eduardo Nakashima
- * Balazs Barcza
- * Javier Lopez Santacruz Serraller
- * Michał Świtała
+ * @author Jhoms Mosquera
+ * @author Eduardo Nakashima
+ * @author Balazs Barcza
+ * @author Javier Lopez Santacruz Serraller
+ * @author Michał Świtała
  * 
  */
-public class Setup {
+public class Setup 
+{
+    public Setup() {}
     
-    MotorJoint Ankle;
-    MotorJoint Knee;
-    MotorJoint Hip;
-    MotorJoint Waist;
-    MotorJoint  Wrist;
-    MotorJoint Elbow;
-    MotorJoint Shoulder;
-    MotorJoint Neck;
-    MotorJoint Head;
-    
-    Data d = new Data();
-    
-    private void setupMethod(){
-        Ankle =  new MotorJoint(d.getAnkleRotation(), 0, 0, 0, d.getAnkleVoltage()); // this is start should update it
+    public MotorJoint[] setupMethod()
+    {
+        Data d = new Data();
+        MotorJoint[] m = new MotorJoint[d.getMotorName().length];
+        //loop to generate the motors in an array
+        for(int i=0;i<d.getMotorName().length;i++)
+        {
+            //        MotorJoint(double maximumRotation, double maximumFlexion, double energyConsumption) {
+            m[i]= new MotorJoint(d.getMaxRotation()[i],d.getMaxFlextion()[i],d.getEnergyConsumption()[i]);
+        }
+        return m;
     }
-    
-    private void printOutData(MotorJoint passObject){
-        passObject.toString();
-    }
+
 }
     

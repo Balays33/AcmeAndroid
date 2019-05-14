@@ -7,115 +7,107 @@ package acmeandroid;
 
 /**
  *
- * @authors 
- * Jhoms Mosquera
- * Eduardo Nakashima
- * Balazs Barcza
- * Javier Lopez Santacruz Serraller
- * Michał Świtała
+ * @author Jhoms Mosquera
+ * @author Eduardo Nakashima
+ * @author Balazs Barcza
+ * @author Javier Lopez Santacruz Serraller
+ * @author Michał Świtała
  * 
  */
 public class Data {
     
-    private double ankleRotation = 30;
-    private double ankleVoltage = 3;
-    private double kneeRotation = 90;
-    private double kneeVoltage = 3;
-    private double hipRotation = 90;
-    private double hipVoltage = 4;
-    private double waistRotation = 30;
-    private double waistFlexion = 90;
-    private double waistVoltage = 4;
-    private double wristRotation = 180;
-    private double wristVoltage = 2;
-    private double elbowRotation = 140;
-    private double elbowVoltage = 3;
-    private double shoulderRotation = 360;
-    private double shoulderVoltage = 2;
-    private double neckRotation = 30;
-    private double neckVoltage = 3;
-    private double headRotation = 180;
-    private double headFlexion = 180;
-    private double headVoltage = 3;
-
-    public double getAnkleRotation() {
-        return ankleRotation;
+ /**
+ *
+ *The reference array with motors identification String
+ */
+    public String[] motorName= new String[]
+    {
+        "Head",//0
+        "Neck",//1
+        "Shoulder-Right",
+        "Shoulder-Left",
+        "Elbow-Right",
+        "Elbow-Left",
+        "Wrist-Right",
+        "Wrist-Left",
+        "Waist",
+        "Hip-Right",
+        "Hip-Left",
+        "Knee-Right",
+        "Knee-Left",
+        "Ankle-Right",
+        "Ankle-Left"//14
+    };
+    private final double[] energyConsumption = new double[]
+    {
+        0,//                "Head",//0
+        0,//                "Neck",//1
+        0,//                "Shoulder-Right",
+        0,//                "Shoulder-Left",
+        0,//                "Elbow-Right",
+        0,//                "Elbow-Left",
+        0,//                "Wrist-Right",
+        0,//                "Wrist-Left",
+        0,//                "Waist",
+        0,//                "Hip-Right",
+        0,//                "Hip-Left",
+        0,//                "Knee-Right",
+        0,//                "Knee-Left",
+        0,//                "Ankle-Right",
+        0//                 "Ankle-Left"//14
+    };    
+    private final double[] MaxFlextion = new double[]
+    {
+        0,//                "Head",//0
+        0,//                "Neck",//1
+        0,//                "Shoulder-Right",
+        0,//                "Shoulder-Left",
+        0,//                "Elbow-Right",
+        0,//                "Elbow-Left",
+        0,//                "Wrist-Right",
+        0,//                "Wrist-Left",
+        0,//                "Waist",
+        0,//                "Hip-Right",
+        0,//                "Hip-Left",
+        0,//                "Knee-Right",
+        0,//                "Knee-Left",
+        0,//                "Ankle-Right",
+        0//                 "Ankle-Left"//14
+    };    
+    private final double[] MaxRotation = new double[]
+    {
+        0,//                "Head",//0
+        0,//                "Neck",//1
+        0,//                "Shoulder-Right",
+        0,//                "Shoulder-Left",
+        0,//                "Elbow-Right",
+        0,//                "Elbow-Left",
+        0,//                "Wrist-Right",
+        0,//                "Wrist-Left",
+        0,//                "Waist",
+        0,//                "Hip-Right",
+        0,//                "Hip-Left",
+        0,//                "Knee-Right",
+        0,//                "Knee-Left",
+        0,//                "Ankle-Right",
+        0//                 "Ankle-Left"//14
+    };    
+    
+    
+    public String[] getMotorName() {
+        return motorName;
     }
 
-    public double getAnkleVoltage() {
-        return ankleVoltage;
+    public double[] getEnergyConsumption() {
+        return energyConsumption;
     }
 
-    public double getKneeRotation() {
-        return kneeRotation;
+    public double[] getMaxFlextion() {
+        return MaxFlextion;
     }
 
-    public double getKneeVoltage() {
-        return kneeVoltage;
-    }
-
-    public double getHipRotation() {
-        return hipRotation;
-    }
-
-    public double getHipVoltage() {
-        return hipVoltage;
-    }
-
-    public double getWaistRotation() {
-        return waistRotation;
-    }
-
-    public double getWaistFlexion() {
-        return waistFlexion;
-    }
-
-    public double getWaistVoltage() {
-        return waistVoltage;
-    }
-
-    public double getWristRotation() {
-        return wristRotation;
-    }
-
-    public double getWristVoltage() {
-        return wristVoltage;
-    }
-
-    public double getElbowRotation() {
-        return elbowRotation;
-    }
-
-    public double getElbowVoltage() {
-        return elbowVoltage;
-    }
-
-    public double getShoulderRotation() {
-        return shoulderRotation;
-    }
-
-    public double getShoulderVoltage() {
-        return shoulderVoltage;
-    }
-
-    public double getNeckRotation() {
-        return neckRotation;
-    }
-
-    public double getNeckVoltage() {
-        return neckVoltage;
-    }
-
-    public double getHeadRotation() {
-        return headRotation;
-    }
-
-    public double getHeadFlexion() {
-        return headFlexion;
-    }
-
-    public double getHeadVoltage() {
-        return headVoltage;
+    public double[] getMaxRotation() {
+        return MaxRotation;
     }
     
     

@@ -7,12 +7,11 @@ package acmeandroid;
 
 /**
  *
- * @authors
- * Jhoms Mosquera
- * Eduardo Nakashima
- * Balazs Barcza
- * Javier Lopez Santacruz Serraller
- * Michał Świtała
+ * @author Jhoms Mosquera
+ * @author Eduardo Nakashima
+ * @author Balazs Barcza
+ * @author Javier Lopez Santacruz Serraller
+ * @author Michał Świtała
  * 
  */
 public class DataSit {
@@ -20,16 +19,49 @@ public class DataSit {
     /*
         This variable should be set up the right position to sit
     */
-    private double ankleRotation = 0;
-    private double kneeRotation = 0;
-    private double hipRotation = 0;
-    private double waistRotation = 0;
-    private double waistFlexion = 0;
-    private double wristRotation = 0;
-    private double elbowRotation = 0;
-    private double shoulderRotation = 0;
-    private double neckRotation = 0;
-    private double headRotation = 0;
-    private double headFlexion = 0;
+    private final double[] rotationIni = new double[]
+    {
+        0,//                "Head",//0
+        0,//                "Neck",//1
+        0,//                "Shoulder-Right",
+        0,//                "Shoulder-Left",
+        0,//                "Elbow-Right",
+        0,//                "Elbow-Left",
+        0,//                "Wrist-Right",
+        0,//                "Wrist-Left",
+        0,//                "Waist",
+        0,//                "Hip-Right",
+        0,//                "Hip-Left",
+        0,//                "Knee-Right",
+        0,//                "Knee-Left",
+        0,//                "Ankle-Right",
+        0//                 "Ankle-Left"//14
+    };    
+    private final double[] flextionIni = new double[]
+    {
+        0,//                "Head",//0
+        0,//                "Neck",//1
+        0,//                "Shoulder-Right",
+        0,//                "Shoulder-Left",
+        0,//                "Elbow-Right",
+        0,//                "Elbow-Left",
+        0,//                "Wrist-Right",
+        0,//                "Wrist-Left",
+        0,//                "Waist",
+        0,//                "Hip-Right",
+        0,//                "Hip-Left",
+        0,//                "Knee-Right",
+        0,//                "Knee-Left",
+        0,//                "Ankle-Right",
+        0//                 "Ankle-Left"//14
+    };    
+
+    public double[] getRotation() {
+        return rotationIni;
+    }
+
+    public double[] getFlextion() {
+        return flextionIni;
+    }
     
 }

@@ -21,18 +21,11 @@ public class Movement
     
     ArrayList SitToStand= new ArrayList();
     
-    ArrayList test = ({0,0,0},{0,1,0})
-    
-    public ArrayList setSitToStand(int[] move)
+    public void setSitToStand()
     {
-        
-            move={0,0,0};//declaration, instantiation and initialization  
-            SitToStand.add(move);
-            m={0,0,0};
-            SitToStand.add(move);
-    
-          return seq;
-    }    
+
+//        int a[]={33,3,4,5};//declaration, instantiation and initialization  
+            int move[]={0,0,0};//motor, type of move and degrees
 //        "Head",//0
 //        "Neck",//1
 //        "Shoulder-Right",
@@ -51,4 +44,7 @@ public class Movement
 
 // flexion = 1 // ratation = 0
 // required degrees for the move    
-}
+            SitToStand.add(move);
+    }    
+
+    }

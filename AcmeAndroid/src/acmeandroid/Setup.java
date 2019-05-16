@@ -30,7 +30,8 @@ public class Setup {
     Data d = new Data();
     
     private void setupMethod(){
-        Ankle =  new MotorJoint(d.getAnkleRotation(), 0, 0, 0, d.getAnkleVoltage()); // this is start should update it
+       // Ankle =  new MotorJoint(d.getAnkleRotation(), 0, 0, 0, d.getAnkleVoltage()); // this is start should update it
+       Ankle = new MotorJoint(0, 0, 0, 0, 0);
     }
     
     private void printOutData(MotorJoint passObject){

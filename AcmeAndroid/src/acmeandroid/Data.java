@@ -46,6 +46,7 @@ public class Data {
     private String[] motorName = new String[15];
     private double[] motorRotation = new double[15];
     private double[] motorFlexion = new double[15];
+    private double[] energyConsumption =  new double[15];
     
     // We using String array to hold the motors name comment by Balazs
     
@@ -88,6 +89,40 @@ public class Data {
         motorFlexion[11] = 180;
         motorFlexion[12] = 180;
         motorFlexion[14] = 180;
+    }
+    public void setupDataEnergyConsumption(){
+        energyConsumption[0] = 3;
+        energyConsumption[1] = 3;
+        energyConsumption[2] = 3;
+        energyConsumption[3] = 3;
+        energyConsumption[4] = 4;
+        energyConsumption[5] = 4;
+        energyConsumption[6] = 4;
+        energyConsumption[7] = 2;
+        energyConsumption[8] = 2;
+        energyConsumption[9] = 3;
+        energyConsumption[10] = 3;
+        energyConsumption[11] = 2;
+        energyConsumption[12] = 2;
+        energyConsumption[13] = 3;
+        energyConsumption[14] = 3;
+        
+    }
+
+    public String[] getMotorName() {
+        return motorName;
+    }
+
+    public double[] getMotorRotation() {
+        return motorRotation;
+    }
+
+    public double[] getMotorFlexion() {
+        return motorFlexion;
+    }
+
+    public double[] getEnergyConsumption() {
+        return energyConsumption;
     }
     
     

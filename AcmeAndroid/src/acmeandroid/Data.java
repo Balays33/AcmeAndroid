@@ -109,7 +109,9 @@ public class Data {
 
     public double[] getMaxRotation() {
         return MaxRotation;
+
     }
+
     /* 
         This is old version We have decided after the second meeting we will use an array to hold the parameters.
             comment by Balazs
@@ -182,7 +184,7 @@ public class Data {
         motorFlexion[11] = 180;
         motorFlexion[12] = 180;
         motorFlexion[14] = 180;
->>>>>>> c124c59f2a2029141d92fd7a85b2537d007c3061
+
     }
     public void setupDataEnergyConsumption(){
         energyConsumption[0] = 3;

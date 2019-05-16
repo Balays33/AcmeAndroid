@@ -17,8 +17,11 @@ package acmeandroid;
 public class Printer 
 {
     
+    
     public void printOutData(MotorJoint passObject){
         passObject.toString();
     }
+    
+    
 
 }

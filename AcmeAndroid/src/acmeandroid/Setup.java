@@ -17,8 +17,7 @@ package acmeandroid;
 public class Setup 
 {
     public Setup() {}
-    
-<<<<<<< HEAD
+
     MotorJoint Ankle;
     MotorJoint Knee;
     MotorJoint Hip;
@@ -31,14 +30,17 @@ public class Setup
     
     Data d = new Data();
     
+    /*
     private void setupMethod(){
        // Ankle =  new MotorJoint(d.getAnkleRotation(), 0, 0, 0, d.getAnkleVoltage()); // this is start should update it
-       Ankle = new MotorJoint(0, 0, 0, 0, 0);
+       Ankle = new MotorJoint(00, 00, 00, 00, 00);
     }
+    
+*/
     
     private void printOutData(MotorJoint passObject){
         passObject.toString();
-=======
+
     public MotorJoint[] setupMethod()
     {
         Data d = new Data();
@@ -50,7 +52,7 @@ public class Setup
             m[i]= new MotorJoint(d.getMaxRotation()[i],d.getMaxFlextion()[i],d.getEnergyConsumption()[i]);
         }
         return m;
->>>>>>> 58653e8843064a8f1a35dd39ecd604e1365704a8
+
     }
 
 }

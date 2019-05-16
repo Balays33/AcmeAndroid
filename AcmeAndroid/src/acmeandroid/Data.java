@@ -7,16 +7,109 @@ package acmeandroid;
 
 /**
  *
- * @authors 
- * Jhoms Mosquera
- * Eduardo Nakashima
- * Balazs Barcza
- * Javier Lopez Santacruz Serraller
- * Michał Świtała
+ * @author Jhoms Mosquera
+ * @author Eduardo Nakashima
+ * @author Balazs Barcza
+ * @author Javier Lopez Santacruz Serraller
+ * @author Michał Świtała
  * 
  */
 public class Data {
     
+<<<<<<< HEAD
+ /**
+ *
+ *The reference array with motors identification String
+ */
+    public String[] motorName= new String[]
+    {
+        "Head",//0
+        "Neck",//1
+        "Shoulder-Right",
+        "Shoulder-Left",
+        "Elbow-Right",
+        "Elbow-Left",
+        "Wrist-Right",
+        "Wrist-Left",
+        "Waist",
+        "Hip-Right",
+        "Hip-Left",
+        "Knee-Right",
+        "Knee-Left",
+        "Ankle-Right",
+        "Ankle-Left"//14
+    };
+    private final double[] energyConsumption = new double[]
+    {
+        0,//                "Head",//0
+        0,//                "Neck",//1
+        0,//                "Shoulder-Right",
+        0,//                "Shoulder-Left",
+        0,//                "Elbow-Right",
+        0,//                "Elbow-Left",
+        0,//                "Wrist-Right",
+        0,//                "Wrist-Left",
+        0,//                "Waist",
+        0,//                "Hip-Right",
+        0,//                "Hip-Left",
+        0,//                "Knee-Right",
+        0,//                "Knee-Left",
+        0,//                "Ankle-Right",
+        0//                 "Ankle-Left"//14
+    };    
+    private final double[] MaxFlextion = new double[]
+    {
+        0,//                "Head",//0
+        0,//                "Neck",//1
+        0,//                "Shoulder-Right",
+        0,//                "Shoulder-Left",
+        0,//                "Elbow-Right",
+        0,//                "Elbow-Left",
+        0,//                "Wrist-Right",
+        0,//                "Wrist-Left",
+        0,//                "Waist",
+        0,//                "Hip-Right",
+        0,//                "Hip-Left",
+        0,//                "Knee-Right",
+        0,//                "Knee-Left",
+        0,//                "Ankle-Right",
+        0//                 "Ankle-Left"//14
+    };    
+    private final double[] MaxRotation = new double[]
+    {
+        0,//                "Head",//0
+        0,//                "Neck",//1
+        0,//                "Shoulder-Right",
+        0,//                "Shoulder-Left",
+        0,//                "Elbow-Right",
+        0,//                "Elbow-Left",
+        0,//                "Wrist-Right",
+        0,//                "Wrist-Left",
+        0,//                "Waist",
+        0,//                "Hip-Right",
+        0,//                "Hip-Left",
+        0,//                "Knee-Right",
+        0,//                "Knee-Left",
+        0,//                "Ankle-Right",
+        0//                 "Ankle-Left"//14
+    };    
+    
+    
+    public String[] getMotorName() {
+        return motorName;
+    }
+
+    public double[] getEnergyConsumption() {
+        return energyConsumption;
+    }
+
+    public double[] getMaxFlextion() {
+        return MaxFlextion;
+    }
+
+    public double[] getMaxRotation() {
+        return MaxRotation;
+=======
     /* 
         This is old version We have decided after the second meeting we will use an array to hold the parameters.
             comment by Balazs
@@ -89,6 +182,7 @@ public class Data {
         motorFlexion[11] = 180;
         motorFlexion[12] = 180;
         motorFlexion[14] = 180;
+>>>>>>> c124c59f2a2029141d92fd7a85b2537d007c3061
     }
     public void setupDataEnergyConsumption(){
         energyConsumption[0] = 3;

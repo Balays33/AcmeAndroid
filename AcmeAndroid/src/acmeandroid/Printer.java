@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package acmeandroid;
 
+package acmeandroid;
 /**
  *
  * @author Jhoms Mosquera
@@ -14,13 +14,11 @@ package acmeandroid;
  * @author Michał Świtała
  * 
  */
-public class AcmeAndroid {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class Printer 
+{
     
+    public void printOutData(MotorJoint passObject){
+        passObject.toString();
+    }
+
 }

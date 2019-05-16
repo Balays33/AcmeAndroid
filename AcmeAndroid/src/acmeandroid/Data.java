@@ -16,7 +16,7 @@ package acmeandroid;
  */
 public class Data {
     
-<<<<<<< HEAD
+
  /**
  *
  *The reference array with motors identification String
@@ -41,33 +41,33 @@ public class Data {
     };
     private final double[] energyConsumption = new double[]
     {
-        0,//                "Head",//0
-        0,//                "Neck",//1
-        0,//                "Shoulder-Right",
-        0,//                "Shoulder-Left",
-        0,//                "Elbow-Right",
-        0,//                "Elbow-Left",
-        0,//                "Wrist-Right",
-        0,//                "Wrist-Left",
-        0,//                "Waist",
-        0,//                "Hip-Right",
-        0,//                "Hip-Left",
-        0,//                "Knee-Right",
-        0,//                "Knee-Left",
-        0,//                "Ankle-Right",
-        0//                 "Ankle-Left"//14
+        3,//                "Head",//0
+        3,//                "Neck",//1
+        2,//                "Shoulder-Right",
+        2,//                "Shoulder-Left",
+        3,//                "Elbow-Right",
+        3,//                "Elbow-Left",
+        2,//                "Wrist-Right",
+        2,//                "Wrist-Left",
+        4,//                "Waist",
+        4,//                "Hip-Right",
+        4,//                "Hip-Left",
+        3,//                "Knee-Right",
+        3,//                "Knee-Left",
+        3,//                "Ankle-Right",
+        3//                 "Ankle-Left"//14
     };    
     private final double[] MaxFlextion = new double[]
     {
-        0,//                "Head",//0
+        180,//                "Head",//0
         0,//                "Neck",//1
-        0,//                "Shoulder-Right",
-        0,//                "Shoulder-Left",
+        180,//                "Shoulder-Right",
+        180,//                "Shoulder-Left",
         0,//                "Elbow-Right",
         0,//                "Elbow-Left",
         0,//                "Wrist-Right",
         0,//                "Wrist-Left",
-        0,//                "Waist",
+        90,//                "Waist",
         0,//                "Hip-Right",
         0,//                "Hip-Left",
         0,//                "Knee-Right",
@@ -77,21 +77,21 @@ public class Data {
     };    
     private final double[] MaxRotation = new double[]
     {
-        0,//                "Head",//0
-        0,//                "Neck",//1
-        0,//                "Shoulder-Right",
-        0,//                "Shoulder-Left",
-        0,//                "Elbow-Right",
-        0,//                "Elbow-Left",
-        0,//                "Wrist-Right",
-        0,//                "Wrist-Left",
-        0,//                "Waist",
-        0,//                "Hip-Right",
-        0,//                "Hip-Left",
-        0,//                "Knee-Right",
-        0,//                "Knee-Left",
-        0,//                "Ankle-Right",
-        0//                 "Ankle-Left"//14
+        180,//                "Head",//0
+        30,//                "Neck",//1
+        360,//                "Shoulder-Right",
+        360,//                "Shoulder-Left",
+        140,//                "Elbow-Right",
+        140,//                "Elbow-Left",
+        180,//                "Wrist-Right",
+        180,//                "Wrist-Left",
+        30,//                "Waist",
+        90,//                "Hip-Right",
+        90,//                "Hip-Left",
+        90,//                "Knee-Right",
+        90,//                "Knee-Left",
+        30,//                "Ankle-Right",
+        30//                 "Ankle-Left"//14
     };    
     
     
@@ -109,7 +109,7 @@ public class Data {
 
     public double[] getMaxRotation() {
         return MaxRotation;
-=======
+    }
     /* 
         This is old version We have decided after the second meeting we will use an array to hold the parameters.
             comment by Balazs
@@ -135,7 +135,7 @@ public class Data {
     private double headFlexion = 180;
     private double headVoltage = 3;
     */
-    
+    /*
     private String[] motorName = new String[15];
     private double[] motorRotation = new double[15];
     private double[] motorFlexion = new double[15];
@@ -218,6 +218,6 @@ public class Data {
     public double[] getEnergyConsumption() {
         return energyConsumption;
     }
-    
+    */
     
 }

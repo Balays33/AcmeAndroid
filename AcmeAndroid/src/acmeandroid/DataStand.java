@@ -25,8 +25,8 @@ public class DataStand {
     */
     private final double[] rotationIni = new double[]
     {
-        0,//                "Head",//0
-        0,//                "Neck",//1
+        0,//                "Head",//0  - All motors is inital at 0 when standing 
+        0,//                "Neck",//1    exept the ancle in 90 degress. 
         0,//                "Shoulder-Right",
         0,//                "Shoulder-Left",
         0,//                "Elbow-Right",
@@ -38,13 +38,13 @@ public class DataStand {
         0,//                "Hip-Left",
         0,//                "Knee-Right",
         0,//                "Knee-Left",
-        0,//                "Ankle-Right",
-        0//                 "Ankle-Left"//14
+        90,//                "Ankle-Right",
+        90//                 "Ankle-Left"//14
     };    
     private final double[] flextionIni = new double[]
     {
-        0,//                "Head",//0
-        0,//                "Neck",//1
+        0,//                "Head",//0 - All initial position of the standing position is 
+        0,//                "Neck",//1   initialise with 0.  
         0,//                "Shoulder-Right",
         0,//                "Shoulder-Left",
         0,//                "Elbow-Right",

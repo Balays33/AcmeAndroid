@@ -41,6 +41,9 @@ public class Setup
     private void printOutData(MotorJoint passObject){
         passObject.toString();
 
+    }
+    
+ 
     public MotorJoint[] setupMethod()
     {
         Data d = new Data();

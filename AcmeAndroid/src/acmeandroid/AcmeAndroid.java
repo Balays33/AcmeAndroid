@@ -27,8 +27,8 @@ public class AcmeAndroid {
 
         // only for testing
         // comment by Michal
-        System.out.println("Creating array of MotorJoin objects");
-        test2 = test.setupMethod();
+        System.out.println("Creating array of MotorJoin objects");        
+        test2 = test.setupMethod();        
         System.out.println("MotorJoin objects created. ");
 
         // this is just test for loop - delete it later

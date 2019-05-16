@@ -18,18 +18,7 @@ public class Setup
 {
     public Setup() {}
 
-    MotorJoint Ankle;
-    MotorJoint Knee;
-    MotorJoint Hip;
-    MotorJoint Waist;
-    MotorJoint  Wrist;
-    MotorJoint Elbow;
-    MotorJoint Shoulder;
-    MotorJoint Neck;
-    MotorJoint Head;
-    
-    Data d = new Data();
-    
+
     /*
     private void setupMethod(){
        // Ankle =  new MotorJoint(d.getAnkleRotation(), 0, 0, 0, d.getAnkleVoltage()); // this is start should update it
@@ -40,7 +29,11 @@ public class Setup
     
     private void printOutData(MotorJoint passObject){
         passObject.toString();
-
+    }
+    /**
+     *
+     * @return
+     */
     public MotorJoint[] setupMethod()
     {
         Data d = new Data();

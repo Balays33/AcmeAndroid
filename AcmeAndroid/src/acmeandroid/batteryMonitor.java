@@ -21,13 +21,20 @@ public class batteryMonitor {
     private final int batteryMaxLevel = 8;
     private double batteryCurrentLevel;
     private long miliseconds;
+    private boolean movementAllow =  false;
     
-    
+    MotorJoint[] m;
     /*
         the power plant is a cheap model of lithium battery from AndroidsRus and 
         can only produce 8 volts, its recovery time after discharging is 3 seconds.(2.6 volts per second)
     */
-    public void battaryCheck(double energyConsumption) throws InterruptedException
+
+    public batteryMonitor(MotorJoint[] m)  
+    {
+        this.m = m;
+    }
+    /*  deadend
+    public void batteryCheck(double energyConsumption) throws InterruptedException
     {
         this.energyConsumption = energyConsumption;
         
@@ -38,5 +45,33 @@ public class batteryMonitor {
         }
     
     }
+    */
     
+    public void allowMove() {
+        
+        
+
+    }
+
+    public void batteryRequire(int index, int movementFlextionOrRotation, double endpoint) {
+
+        switch (movementFlextionOrRotation) {
+            case 0:   // Rotation = 0
+
+                if (endpoint > m[index].getMaximumRotation()) {
+                    System.out.print("ERROR");
+                }
+                m[1].getEnergyConsumption();
+                m[1].getMaximumRotation();
+                double moveCtoEndPoint = endpoint - m[index].getCurrentRotation();
+
+                break;
+            case 1:   // flexion = 1 
+
+                break;
+            default:
+                System.out.print("ERROR");
+
+        }
+    }
 }

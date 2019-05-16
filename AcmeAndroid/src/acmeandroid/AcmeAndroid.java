@@ -16,11 +16,32 @@ package acmeandroid;
  */
 public class AcmeAndroid {
 
-    /**
-     * @param args the command line arguments
-     */
+    
+    
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        // comment by Michal
+        MotorJoint[] test2;
+        Setup test = new Setup();
+
+        // only for testing
+        // comment by Michal
+        System.out.println("Creating array of MotorJoin objects");
+        test2 = test.setupMethod();
+        System.out.println("MotorJoin objects created. ");
+
+        // this is just test for loop - delete it later
+        // comment by Michal
+        for (int i = 0; i < test2.length; i++) {
+            // checking data
+            System.out.println("Energy consumption in MotorJoint number : " + i + " is : " + test2[i].getEnergyConsumption());
+            System.out.println("Max flexion in MotorJoint number : " + i + " is : " + test2[i].getMaximumFlexion());
+
+        }
+
     }
+    
+    
     
 }

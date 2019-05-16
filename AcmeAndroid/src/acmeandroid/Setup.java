@@ -29,11 +29,18 @@ public class Setup
     
     private void printOutData(MotorJoint passObject){
         passObject.toString();
+<<<<<<< HEAD
     }
     /**
      *
      * @return
      */
+=======
+
+    }
+    
+ 
+>>>>>>> a92b06604d1d5805afe60f79aade9d66aac97620
     public MotorJoint[] setupMethod()
     {
         Data d = new Data();

@@ -42,8 +42,11 @@ public class Menu {
             System.out.printf(" 3- Sit Down%n 4- EXIT%n");
             Scanner scan = new Scanner(System.in);
             
+
+            
             if (scan.hasNext()) 
             {
+                //getInt();
                 menuNumber = scan.nextInt();
             }
 
@@ -51,13 +54,23 @@ public class Menu {
      
         switch (menuNumber) {
             case 1:
-                 System.out.println(" case 1 ");
+                 System.out.println("Stand Up");
+                 //Set initial position sit
+                 //Set final position stand up
+                 //Call method
                 break;
             case 2:
                  System.out.println(" walk ");
+                  //Set initial position stand up
+                 //Walk 3 steps
+                 //Set final position stand up
+                 //Call method
                 break;
             case 3:
                  System.out.println(" sit down ");
+                  //Set initial position stand up
+                 //Set final position sit down
+                 //Call method
             break;
             case 4:
                  System.out.println(" Exit");
@@ -67,6 +80,21 @@ public class Menu {
         }
      } while (menuNumber != 4);
     
+    }
+    
+    public void getInt()
+    {
+        try
+        {
+             System.out.println("Only numbers");
+             Scanner scan = new Scanner(System.in);
+             
+        }
+        catch(Exception e)
+        {
+            System.out.println("Error, only numbers");
+            getInt();
+        }
     }
 }
 

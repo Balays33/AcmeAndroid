@@ -52,7 +52,9 @@ public class Printer
             mt = " flextionate ";
         }
 
-        System.out.println("The motor " + motorNames[motorIndex] + mt + "from " + current + " to " + finalPositon + " degress consuming " + energyConsumed);
+        System.out.println("The motor " + motorNames[motorIndex] + mt 
+                + "from " + current + " to " + finalPositon 
+                + " degress consuming " + energyConsumed);
 
     }
     

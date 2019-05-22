@@ -21,6 +21,18 @@ public class AcmeAndroid {
     
     public static void main(String[] args) {
 
+        Logic logic1 = new Logic();
+        Printer printer1 = new Printer();
+        
+        
+        
+        printer1 = logic1.printWelcome(printer1);
+        logic1.showMenu();
+        
+        
+        
+        
+        /*
         // comment by Michal
         MotorJoint[] test2;
         Setup test = new Setup();
@@ -45,10 +57,8 @@ public class AcmeAndroid {
             System.out.println("Max flexion in MotorJoint number : " + i + " is : " + test2[i].getMaximumFlexion());
 
         }
-
-        // Menu by Javi
-       Menu m = new Menu();
-       m.runMenu();
+*/
+        
       
     }
     

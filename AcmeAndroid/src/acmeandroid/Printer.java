@@ -17,16 +17,20 @@ package acmeandroid;
 public class Printer {
 
     
+   // Fields of data
+       
+   private String[] motorNames;
     
     
-    
-    
-    String[] motorNames;
 
-    
-    
-    
-    
+    public void setMotorNames(String[] motoNames) {
+
+        this.motorNames = motoNames;
+    }
+
+    /**
+     * @param passObject MotorJoint object needs to be passed inside
+     */
     public void printOutData(MotorJoint passObject) {
 
         passObject.toString();
@@ -49,9 +53,9 @@ public class Printer {
 
     /**
      *
-     * @param motorIndex  the index of the motorJoint to be selected
-     * @param current  the current position (degree) of the current motorJoint
-     * @param batteryEnergy  the current energy of the battery
+     * @param motorIndex the index of the motorJoint to be selected
+     * @param current the current position (degree) of the current motorJoint
+     * @param batteryEnergy the current energy of the battery
      */
     public void sittingPosition(int motorIndex, double current, double batteryEnergy) {
 
@@ -59,16 +63,14 @@ public class Printer {
         System.out.println("The Android is currently sitting on the chair.");
         System.out.println(" ");
         System.out.println("The motor " + motorNames[motorIndex] + " is currently at: " + current + " degrees.");
-        System.out.println("The battery has " + batteryEnergy+ " energy left.");
+        System.out.println("The battery has " + batteryEnergy + " energy left.");
     }
-    
-    
-    
-     /**
+
+    /**
      *
-     * @param motorIndex  the index of the motorJoint to be selected
-     * @param current  the current position (degree) of the current motorJoint
-     * @param batteryEnergy  the current energy of the battery
+     * @param motorIndex the index of the motorJoint to be selected
+     * @param current the current position (degree) of the current motorJoint
+     * @param batteryEnergy the current energy of the battery
      */
     public void standingPosition(int motorIndex, double current, double batteryEnergy) {
 
@@ -76,10 +78,9 @@ public class Printer {
         System.out.println("The Android is currently standing.");
         System.out.println(" ");
         System.out.println("The motor " + motorNames[motorIndex] + " is currently at: " + current + " degrees.");
-        System.out.println("The battery has " + batteryEnergy+ " energy left.");
-        
-    }
+        System.out.println("The battery has " + batteryEnergy + " energy left.");
 
+    }
 
     /**
      *
@@ -96,11 +97,14 @@ public class Printer {
             mt = " flextionate ";
         }
 
-        System.out.println("The motor " + motorNames[motorIndex] + mt + "from " + current + " to " + finalPositon + " degress consuming " + energyConsumed);
+        System.out.println(" ");
+        System.out.println("The Android is currently moving.");
+        System.out.println(" ");
+        System.out.println("The motor " + motorNames[motorIndex] + mt + "from " + current + " to " + finalPositon + " degrees.");
+        System.out.println("The battery has been consumed by " + energyConsumed + " Volts. ");
 
     }
 
-    
-    
+
     
 }

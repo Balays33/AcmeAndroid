@@ -20,22 +20,37 @@ public class Printer
     
     String [] motorNames;
     
-    public void printOutData(MotorJoint passObject){
+    public void printOutData(MotorJoint passObject) {
+        
         passObject.toString();
     }
+
     
-    public void welcome(){
-        
-        System.out.println("Welcome in AcmeAndroid");
+    public void welcome() {
+
+        System.out.println("Welcome in AcmeAndroid.");
         System.out.println(" ");
-        System.out.println("Make an Android stand, walk and sit down with human-like movement.\n"
-                + "\n"
-                + "Acme Robotics have developed an Android, in collaboration with their partners AndroidsRus, "
-                + "they have sourced the motors to be used to articulate the android, along with a "
-                + "cheap power plant.\n"
-                + "You have been tasked with designing and testing the algorithms to be used in the project.");
-                   
+        System.out.println("Acme Robotics have developed an Android, in collaboration with their partners AndroidsRus.");
+        System.out.println("They have sourced the motors to be used to articulate the android, along with a cheap power plant.");
+        System.out.println("This application will allow you to choose and make an Android stand, walk and sit down with human-like movement.");
+        System.out.println("You will also be able to see the progress of each pose transitions.");
+        System.out.println(" ");
+        
+
     }
+    
+        public void sittingPosition(int motorIndex, int moveType, double current, double finalPositon, double batteryStatus) {
+
+        System.out.println(" ");
+        System.out.println("The Android is currently sitting on the chair.");
+        System.out.println(" ");
+        System.out.println("The motor " + motorNames[motorIndex] +  " is currently at: " + current +" degrees.");
+        System.out.println("The motor " + motorNames[motorIndex] +  " is currently at: " + current +" degrees.");   
+    }
+
+
+    
+    
     /**
      * 
      * @param motorIndex the index of the motorJoint
@@ -44,7 +59,7 @@ public class Printer
      * @param finalPositon final position of the motorJoint
      * @param energyConsumed energy that has been consumed during movement
      */
-    
+        
     public void printMove(int motorIndex, int moveType, double current, double finalPositon, double energyConsumed) {
 
         String mt = " rotates ";
@@ -56,6 +71,12 @@ public class Printer
 
     }
     
+    
+    
+    
+    
+    public void batteryStatus(){    }
+
     
     
     

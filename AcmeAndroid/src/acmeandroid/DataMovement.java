@@ -14,9 +14,10 @@ import java.util.ArrayList;
  */
 public class DataMovement 
 {
-    ArrayList standUp= new ArrayList();// ArayList to hold all moves
-    ArrayList walkForward= new ArrayList();// ArayList to hold all moves
-    ArrayList sitDown= new ArrayList();// ArayList to hold all moves
+    private ArrayList standUp= new ArrayList();// ArayList to hold all moves
+    private ArrayList walkForward= new ArrayList();// ArayList to hold all moves
+    private ArrayList sitDown= new ArrayList();// ArayList to hold all moves
+
     public void setSitToStand()
     {
            int[] move;
@@ -41,5 +42,17 @@ public class DataMovement
            move =new int[]{ 00 , 0 , 30 }; standUp.add(move);//motor, type of move and degrees
            move =new int[]{ 00 , 0 , 40 }; standUp.add(move);//motor, type of move and degrees
     } 
+
+    public ArrayList getStandUp() {
+        return standUp;
+    }
+
+    public ArrayList getWalkForward() {
+        return walkForward;
+    }
+
+    public ArrayList getSitDown() {
+        return sitDown;
+    }
 
 }

@@ -5,8 +5,6 @@
  */
 package acmeandroid;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Jhoms Mosquera
@@ -18,34 +16,28 @@ import java.util.ArrayList;
  */
 public class Movement 
 {
-    
-    ArrayList standUp= new ArrayList();
-    
-    public void setSitToStand()
+
+    public Movement() 
     {
-           int[] move;
-//        int a[]={33,3,4,5};//declaration, instantiation and initialization  
-//0        "Head",
-//1        "Neck",
-//2        "Shoulder-Right",
-//3        "Shoulder-Left",
-//4        "Elbow-Right",
-//5        "Elbow-Left",
-//6        "Wrist-Right",
-//7        "Wrist-Left",
-//8        "Waist",
-//9        "Hip-Right",
-//10       "Hip-Left",
-//11       "Knee-Right",
-//12       "Knee-Left",
-//13       "Ankle-Right",
-//14       "Ankle-Left"//14
-// flexion = 1 // rotation = 0
-// required degrees for the move    
         
-           move =new int[]{ 0,0,30}; standUp.add(move);//motor, type of move and degrees
-           move =new int[]{ 0,0,40}; standUp.add(move);//motor, type of move and degrees
-    } 
+    }
+    
+    public void start(int input)
+    {
+        switch (input)
+        {
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        default:
+            break;
+            
+        }
+        
+    }
     
 
 }

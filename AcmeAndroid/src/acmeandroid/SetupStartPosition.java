@@ -38,5 +38,5 @@ public class SetupStartPosition
             m[i].setCurrentFlexion(f[i]);
         }
         return m;
-    }   
+    }  
 }

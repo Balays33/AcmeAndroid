@@ -20,7 +20,7 @@ public class AcmeAndroid {
     
     
     public static void main(String[] args) {
-
+        /*
         Logic logic1 = new Logic();
         Printer printer1 = new Printer();
         
@@ -28,8 +28,13 @@ public class AcmeAndroid {
         
         printer1 = logic1.printWelcome(printer1);
         logic1.showMenu();
-        
-        
+        */
+        // comment by Balazs 
+            // test the batterymonitor  Knee  : 90 deg.  Voltage required : 3 volts
+             batteryMonitor bm = new batteryMonitor();
+        bm.setBatteryCurrentLevel(2);
+        bm.allowMove(1, 0, 73);
+       
         
         
         /*
@@ -78,11 +83,10 @@ public class AcmeAndroid {
         }
 <<<<<<< HEAD
         */
-=======
-*/
+
+
         
-      
->>>>>>> ad2f0cb14802328590f556d2fc705d8a4d250244
+
     }
     
     

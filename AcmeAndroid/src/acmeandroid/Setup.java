@@ -35,19 +35,9 @@ public class Setup
      *
      * @return
      */
-<<<<<<< HEAD
-
-=======
->>>>>>> ad2f0cb14802328590f556d2fc705d8a4d250244
 
     
-    
- 
-<<<<<<< HEAD
-    /*
-=======
 
->>>>>>> ad2f0cb14802328590f556d2fc705d8a4d250244
     public MotorJoint[] setupMethod()
     {
         Data d = new Data();
@@ -63,4 +53,4 @@ public class Setup
     }
     
 }
-  */  
+   

@@ -96,7 +96,7 @@ public class batteryMonitor {
                 */
                 ///*
                 double maxRotation = 90;
-                double currentP = 65;
+                double currentP = 30;
                 
                 if (endpoint > maxRotation) {
                     System.out.println("ERROR");
@@ -106,7 +106,7 @@ public class batteryMonitor {
                     if (endpoint > currentP) {
                         sixtydegree = (60 * (maxRotation - currentP) / 100);
                     } else {
-                        sixtydegree = (60 * (currentP) / 100);
+                        sixtydegree = (currentP * 0.6);
                     }
                     System.out.println("sixtydegree = " + sixtydegree);
                     System.out.println("joint move :" + (endpoint - currentP));

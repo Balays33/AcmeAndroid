@@ -45,6 +45,8 @@ public class Movement
 // flexion = 1 // ratation = 0
 // required degrees for the move    
             SitToStand.add(move);
-    }    
+    } 
+    
+        
 
     }

@@ -22,23 +22,23 @@ public class AcmeAndroid {
     public static void main(String[] args) {
 
         // comment by Michal
-        MotorJoint[] test2;
+        MotorJoint[] mj;
         Setup test = new Setup();
 
         // only for testing
         // comment by Michal
         System.out.println("Creating array of MotorJoin objects");
-       // test2 = test.setupMethod(MotorJoint);
+       // mj = test.setupMethod(MotorJoint);
         System.out.println("Creating array of MotorJoin objects");        
-        test2 = test.setupMethod();        
+        mj = test.setupMethod();        
         System.out.println("MotorJoin objects created. ");
 
         // this is just test for loop - delete it later
         // comment by Michal
-        for (int i = 0; i < test2.length; i++) {
+        for (int i = 0; i < mj.length; i++) {
             // checking data
-            System.out.println("Energy consumption in MotorJoint number : " + i + " is : " + test2[i].getEnergyConsumption());
-            System.out.println("Max flexion in MotorJoint number : " + i + " is : " + test2[i].getMaximumFlexion());
+            System.out.println("Energy consumption in MotorJoint number : " + i + " is : " + mj[i].getEnergyConsumption());
+            System.out.println("Max flexion in MotorJoint number : " + i + " is : " + mj[i].getMaximumFlexion());
 
         }
 

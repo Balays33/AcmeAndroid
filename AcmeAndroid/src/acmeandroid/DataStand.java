@@ -23,6 +23,9 @@ public class DataStand {
     /*
         This variable should be set up the right position to sit
     */
+    
+    
+    
     private final double[] rotationIni = new double[]
     {
         0,//                "Head",//0  - All motors is inital at 0 when standing 
@@ -41,6 +44,8 @@ public class DataStand {
         90,//                "Ankle-Right",
         90//                 "Ankle-Left"//14
     };    
+    
+    
     private final double[] flextionIni = new double[]
     {
         0,//                "Head",//0 - All initial position of the standing position is 
@@ -60,12 +65,29 @@ public class DataStand {
         0//                 "Ankle-Left"//14
     };    
 
-    public double[] getRotation() {
+   
+    public double [] getRotation() {
+        
         return rotationIni;
     }
-
-    public double[] getFlextion() {
+    
+  
+    public double [] getFlextion() {
+        
         return flextionIni;
     }
+    
+     //Return one rotation only at specified index
+    public double getRotationAt(int index) {
+        
+        return rotationIni [index];
+    }
+    
+  //Return one flextion only at specified index
+    public double getFlextionAt(int index) {
+        
+        return flextionIni [index];
+    }
+        
         
 }

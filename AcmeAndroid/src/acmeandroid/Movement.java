@@ -49,7 +49,7 @@ public class Movement
         
     }
 
-    private void moving(DataSit d,ArrayList ar ) 
+    private void moving(DataSit d,ArrayList ar) 
     {   
         MotorJoint mm;
         int[] move;

@@ -72,7 +72,7 @@ public class batteryMonitor {
         //this.endpoint = endpoint;
         switch (movementFlextionOrRotation) {
             case 0:   // Rotation = 0
-                ///*
+                /*
                 if (endpoint > m[index].getCurrentRotation()) {
                     System.out.print("ERROR");
                     movementAllow = false;
@@ -93,12 +93,12 @@ public class batteryMonitor {
                         energyConsumption = m[index].getEnergyConsumption();
                     }
                 }
-                //*/
-                /*
+                */
+                ///*
                 double maxRotation = 90;
-                double currentP = 80;
+                double currentP = 65;
                 
-                if (endpoint > currentP) {
+                if (endpoint > maxRotation) {
                     System.out.println("ERROR");
                     movementAllow = false;
                 } else {
@@ -119,7 +119,7 @@ public class batteryMonitor {
                         System.out.println("energyConsumption: " + energyConsumption);
                     }
                 }
-                */
+                //*/
                 break;
             case 1:   // flexion = 1 
                 ///*

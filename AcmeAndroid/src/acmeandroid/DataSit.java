@@ -63,5 +63,16 @@ public class DataSit {
     public double[] getFlextion() {
         return flextionIni;
     }
-    
+
+    //Return one rotation only at specified index
+    public double getRotationAt(int index) {
+
+        return rotationIni[index];
+    }
+
+    //Return one flextion only at specified index
+    public double getFlextionAt(int index) {
+
+        return flextionIni[index];
+    }
 }

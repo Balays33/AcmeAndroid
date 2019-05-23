@@ -16,8 +16,6 @@ package acmeandroid;
  */
 public class Printer {
 
-    
- 
     /**
      * @param passObject MotorJoint object needs to be passed inside
      */
@@ -43,58 +41,48 @@ public class Printer {
 
     /**
      *
-     * @param motorIndex the index of the motorJoint to be selected
-     * @param current the current position (degree) of the current motorJoint
-     * @param batteryEnergy the current energy of the battery
+     * @param dataSit pass DataSit class over here to access data field
+     * @param data pass Data class over here to access data field
+     *
      */
-    public void sittingPosition(int motorIndex, double current, double batteryEnergy) {
+    public void sittingPosition(DataSit dataSit, Data data) {
 
         System.out.println(" ");
         System.out.println("The Android is currently sitting on the chair.");
         System.out.println(" ");
-        
-        System.out.println("The motor " + motorNames[motorIndex] + " is currently at: " + current + " degrees.");
-        
-        System.out.println("The battery has " + batteryEnergy + " energy left.");
-        
-        
+
+        // Loop through motorNames array  which is passed by Data object overhere
+        for (int index = 0; index < data.getMotorName().length; index++) {
+
+            System.out.println("The motor " + data.getMotorNameAt(index) + "  has  flextion at: " + dataSit.getFlextionAt(index) + " degrees and rotation at: " + dataSit.getRotationAt(index) + " degrees. ");
+
+        }
+
     }
 
-    /*
-    public void currentPosition(int motorIndex,double curren,int moveType)
-    {
-        String move="";
-
-        System.out.println("The " + motorNames[motorIndex] + " motor "+move+" is  at: " + current + " degrees.");
-        
-        
-    }
-
-*/
-    
     /**
      *
      * @param dataStand pass DataStand class over here to access data field
      * @param data pass Data class over here to access data field
-     * 
+     *
      */
     public void standingPosition(DataStand dataStand, Data data) {
-        
+
         System.out.println(" ");
         System.out.println("The Android is currently standing.");
         System.out.println(" ");
 
         // Loop through motorNames array  which is passed by Data object overhere
         for (int index = 0; index < data.getMotorName().length; index++) {
-            
+
             System.out.println("The motor " + data.getMotorNameAt(index) + "  has  flextion at: " + dataStand.getFlextionAt(index) + " degrees and rotation at: " + dataStand.getRotationAt(index) + " degrees. ");
-            
+
         }
-        
+
     }
 
     /**
-     *@param data the Data class object required to access MotorNames array
+     * @param data the Data class object required to access MotorNames array
      * @param motorIndex the index of the motorJoint
      * @param moveType 0 = rotates, 1 = flextionate
      * @param current current position of the motorJoint
@@ -116,6 +104,4 @@ public class Printer {
 
     }
 
-
-    
 }

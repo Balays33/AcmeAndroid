@@ -42,13 +42,15 @@ public class AcmeAndroid {
         
         
         
-        
+        // TESTING
         Printer print = new Printer();
-        DataStand ds = new DataStand();
+        DataStand dataStand = new DataStand();
         Data dat = new Data();
+        DataSit dataSit = new DataSit();
         
-        print.standingPosition(ds, dat);
-        
+         print.sittingPosition(dataSit, dat);
+        print.standingPosition(dataStand, dat);
+
         
         
         /*

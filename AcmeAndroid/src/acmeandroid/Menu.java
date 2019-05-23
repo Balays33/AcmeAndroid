@@ -45,16 +45,13 @@ public class Menu {
             System.out.printf(" 1-Stand up%n 2- Walk%n");
             System.out.printf(" 3- Sit Down%n 4- EXIT%n");
             Scanner scan = new Scanner(System.in);
-            
-
-            
             if (scan.hasNext()) 
             {
                 getInt();
                 
             }
 
-        } while ((menuNumber != 1) && (menuNumber != 2) && (menuNumber != 3) && (menuNumber != 4) && (menuNumber != 5));
+        } while ((menuNumber != 1) && (menuNumber != 2) && (menuNumber != 3) && (menuNumber != 4));
      
         switch (menuNumber) {
             case 1:

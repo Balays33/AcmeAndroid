@@ -25,7 +25,7 @@ public class batteryMonitor {
     private final int batteryMaxLevel = 8;
     private double batteryCurrentLevel;
     private long miliseconds;
-    private boolean movementAllow =  false;
+    private boolean movementAllow =  true;
     private double movement;
     private double sixtydegree;
     
@@ -64,7 +64,7 @@ public class batteryMonitor {
     public boolean allowMove(int index, int movementFlextionOrRotation, double endpoint) {
         
         batteryRequire(index,movementFlextionOrRotation,endpoint);
-        return true;    
+        return movementAllow;    
     }
 
     private void batteryRequire(int index, int movementFlextionOrRotation, double endpoint) {
@@ -72,64 +72,86 @@ public class batteryMonitor {
         //this.endpoint = endpoint;
         switch (movementFlextionOrRotation) {
             case 0:   // Rotation = 0
-                
-                if (endpoint > m[index].getMaximumRotation()) {
+                ///*
+                if (endpoint > m[index].getCurrentRotation()) {
                     System.out.print("ERROR");
+                    movementAllow = false;
+                } else {
+
+                    if (endpoint > m[index].getCurrentRotation()) {
+                        sixtydegree = (60 * (m[index].getMaximumRotation() - m[index].getCurrentRotation()) / 100);
+                    } else {
+                        sixtydegree = (60 * (m[index].getCurrentRotation()) / 100);
+                    }
+                    System.out.println("sixtydegree = " + sixtydegree);
+                    System.out.println("joint moves :" + (endpoint - m[index].getCurrentRotation()));
+                    if (Math.abs(endpoint - m[index].getCurrentRotation()) > sixtydegree) {
+                        //add extra 3 volt
+                        System.out.println("add extra 3 volt ");
+                        energyConsumption = 3 + 3;
+                    } else {
+                        energyConsumption = m[index].getEnergyConsumption();
+                    }
                 }
-               
-                if (endpoint >m[index].getCurrentRotation()){
-                    sixtydegree = (60*(m[index].getMaximumRotation()-m[index].getCurrentRotation())/100);
-                }
-                    else { 
-                            sixtydegree = (60*(m[index].getCurrentRotation())/100);
-                            }
-                if (Math.abs(endpoint-m[index].getCurrentRotation())> sixtydegree){
-                    //add extra 3 volt
-                    energyConsumption = m[index].getEnergyConsumption()+3;
-                } else{
-                    energyConsumption = m[index].getEnergyConsumption();
-                }
-                
+                //*/
                 /*
                 double maxRotation = 90;
                 double currentP = 80;
                 
-                //movement = endpoint - currentP;
-                //System.out.println("movement = "+movement);
-                if (endpoint >currentP){
-                    sixtydegree = (60*(maxRotation-currentP)/100);
-                    } else {sixtydegree = (60*(currentP)/100);}
-                System.out.println("sixtydegree = "+sixtydegree);
-                System.out.println(endpoint-currentP);
-                    if (Math.abs(endpoint-currentP) > sixtydegree ){
+                if (endpoint > currentP) {
+                    System.out.println("ERROR");
+                    movementAllow = false;
+                } else {
+
+                    if (endpoint > currentP) {
+                        sixtydegree = (60 * (maxRotation - currentP) / 100);
+                    } else {
+                        sixtydegree = (60 * (currentP) / 100);
+                    }
+                    System.out.println("sixtydegree = " + sixtydegree);
+                    System.out.println("joint move :" + (endpoint - currentP));
+                    if (Math.abs(endpoint - currentP) > sixtydegree) {
                         System.out.println("add extra 3 volt ");
-                        energyConsumption = 3 +3;
-                        System.out.println("energyConsumption: "+energyConsumption);
+                        energyConsumption = 3 + 3;
+                        System.out.println("energyConsumption: " + energyConsumption);
                     } else {
                         energyConsumption = 3;
-                        System.out.println("energyConsumption: "+energyConsumption);
+                        System.out.println("energyConsumption: " + energyConsumption);
                     }
+                }
                 */
                 break;
             case 1:   // flexion = 1 
-                /*
-                 if (endpoint > m[index].getCurrentFlexion()) {
+                ///*
+                if (endpoint > m[index].getCurrentFlexion()) {
                     System.out.print("ERROR");
+                    movementAllow = false;
+                } else {
+
+                    if (endpoint > m[index].getCurrentFlexion()) {
+                        sixtydegree = (60 * (m[index].getMaximumFlexion() - m[index].getCurrentFlexion()) / 100);
+                    } else {
+                        sixtydegree = (60 * (m[index].getCurrentFlexion()) / 100);
+                    }
+                    System.out.println("sixtydegree = " + sixtydegree);
+                    System.out.println("Flexion moves :" + (endpoint - m[index].getCurrentFlexion()));
+                    if (Math.abs(endpoint - m[index].getCurrentFlexion()) > sixtydegree) {
+                        //add extra 3 volt
+                        System.out.println("add extra 3 volt ");
+                        energyConsumption = 3 + 3;
+                    } else {
+                        energyConsumption = m[index].getEnergyConsumption();
+                    }
                 }
-                double sixtydegree = (60*(m[index].getMaximumFlexion()-m[index].getCurrentFlexion())/100);
-                if (Math.abs(endpoint-m[index].getCurrentFlexion()> sixtydegree){
-                    //add extra 3 volt
-                    energyConsumption = m[index].getEnergyConsumption()+3;
-                } else{
-                    energyConsumption = m[index].getEnergyConsumption();
-                }
-                */
+                //*/
                 break;
             default:
                 System.out.print("ERROR");
 
         }
-        batteryRecharge(energyConsumption);
+        if (movementAllow){
+            batteryRecharge(energyConsumption);
+            }
     }
     
     private void batteryRecharge(double energyConsumption){
@@ -147,7 +169,6 @@ public class batteryMonitor {
                 Logger.getLogger(batteryMonitor.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-       
     }
 
     public double getBatteryCurrentLevel() {

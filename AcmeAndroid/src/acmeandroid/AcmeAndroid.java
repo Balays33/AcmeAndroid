@@ -33,7 +33,7 @@ public class AcmeAndroid {
             // test the batterymonitor  Knee  : 90 deg.  Voltage required : 3 volts
              batteryMonitor bm = new batteryMonitor();
         bm.setBatteryCurrentLevel(2);
-        bm.allowMove(1, 0, 73);
+        bm.allowMove(1, 0, 95);
        
         
         

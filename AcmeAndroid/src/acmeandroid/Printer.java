@@ -87,7 +87,7 @@ public class Printer {
         // Loop through motorNames array  which is passed by Data object overhere
         for (int index = 0; index < data.getMotorName().length; index++) {
             
-            System.out.println("The motor " + data.getMotorNameAt(index) + " has  flextion at: " + dataStand.getFlextionAt(index) + " degrees and rotation at: " + dataStand.getRotationAt(index) + " degrees. ");
+            System.out.println("The motor " + data.getMotorNameAt(index) + "  has  flextion at: " + dataStand.getFlextionAt(index) + " degrees and rotation at: " + dataStand.getRotationAt(index) + " degrees. ");
             
         }
         

@@ -20,7 +20,8 @@ public class Logic {
     
     //Here we put logic, what programm is doing step by step
     
-    public Printer printWelcome(Printer printer) {
+    public Printer printWelcome(Printer printer) 
+    {
 
         printer.welcome();
             return printer;
@@ -30,7 +31,8 @@ public class Logic {
 
     }
 
-    public void showMenu() {
+    public void showMenu() 
+    {
         
     System.out.println(" ");
     

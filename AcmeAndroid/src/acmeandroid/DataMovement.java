@@ -3,28 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package acmeandroid;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author Jhoms Mosquera
- * @author Eduardo Nakashima
- * @author Balazs Barcza
- * @author Javier Lopez Santacruz Serraller
- * @author Michał Świtała
- * 
+ * @author duzen
  */
-public class Movement 
+public class DataMovement 
 {
-    
-    ArrayList standUp= new ArrayList();
-    
+    ArrayList standUp= new ArrayList();// ArayList to hold all moves
     public void setSitToStand()
     {
            int[] move;
-//        int a[]={33,3,4,5};//declaration, instantiation and initialization  
 //0        "Head",
 //1        "Neck",
 //2        "Shoulder-Right",
@@ -43,9 +36,8 @@ public class Movement
 // flexion = 1 // rotation = 0
 // required degrees for the move    
         
-           move =new int[]{ 0,0,30}; standUp.add(move);//motor, type of move and degrees
-           move =new int[]{ 0,0,40}; standUp.add(move);//motor, type of move and degrees
+           move =new int[]{ 00 , 0 , 30 }; standUp.add(move);//motor, type of move and degrees
+           move =new int[]{ 00 , 0 , 40 }; standUp.add(move);//motor, type of move and degrees
     } 
-    
 
 }

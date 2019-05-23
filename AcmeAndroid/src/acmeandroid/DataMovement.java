@@ -15,6 +15,8 @@ import java.util.ArrayList;
 public class DataMovement 
 {
     ArrayList standUp= new ArrayList();// ArayList to hold all moves
+    ArrayList walkForward= new ArrayList();// ArayList to hold all moves
+    ArrayList sitDown= new ArrayList();// ArayList to hold all moves
     public void setSitToStand()
     {
            int[] move;

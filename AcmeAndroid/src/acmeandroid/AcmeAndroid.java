@@ -20,17 +20,25 @@ public class AcmeAndroid {
     
     
     public static void main(String[] args) {
-
+        //parameters & constructors
+        Printer p = new Printer();
+        Menu mn = new Menu();
+        //flow
+        p.welcome();
+        mn.showMenu();
+        /*
+        
         // comment by Michal
         MotorJoint[] mj;
-        Setup test = new Setup();
+        Setup mainSet = new Setup();
+        
 
         // only for testing
         // comment by Michal
-        System.out.println("Creating array of MotorJoin objects");
+//        System.out.println("Creating array of MotorJoin objects");
        // mj = test.setupMethod(MotorJoint);
         System.out.println("Creating array of MotorJoin objects");        
-        mj = test.setupMethod();        
+        mj = mainSet.setupMethod();        
         System.out.println("MotorJoin objects created. ");
 
         // this is just test for loop - delete it later
@@ -41,7 +49,7 @@ public class AcmeAndroid {
             System.out.println("Max flexion in MotorJoint number : " + i + " is : " + mj[i].getMaximumFlexion());
 
         }
-
+*/
     }
     
     

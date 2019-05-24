@@ -51,7 +51,8 @@ public class Menu {
                 
             }
 
-        } while ((menuNumber != 1) && (menuNumber != 2) && (menuNumber != 3) && (menuNumber != 4));
+        } 
+        while ((menuNumber != 1) && (menuNumber != 2) && (menuNumber != 3) && (menuNumber != 4));
      
         switch (menuNumber) {
             case 1:

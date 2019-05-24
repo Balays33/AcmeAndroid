@@ -43,6 +43,7 @@ public class Movement
             moving(du,dm.getSitDown());
             break;
         default:
+            
             break;
             
         }

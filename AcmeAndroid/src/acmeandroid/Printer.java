@@ -19,13 +19,19 @@ public class Printer {
     
    // Fields of data
        
-   private String[] motorNames;
+    private Data d;
+    private String[] motorNames;
+
+    public Printer()
+    {
+        this.motorNames = d.getMotorName();
+    }
     
     
 
-    public void setMotorNames(String[] motoNames) {
+    public void setMotorNames() {
 
-        this.motorNames = motoNames;
+        this.motorNames = d.getMotorName();
     }
 
     /**

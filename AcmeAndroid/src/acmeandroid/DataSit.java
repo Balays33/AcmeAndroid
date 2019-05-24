@@ -60,8 +60,8 @@ public class DataSit {
     }
 
     
-    private final double[] rotationIni;    
-    private final double[] flextionIni;    
+    private double[] rotationIni;    
+    private double[] flextionIni;    
 
     public double[] getRotation() {
         return rotationIni;

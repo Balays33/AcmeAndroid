@@ -96,7 +96,7 @@ public class batteryMonitor {
                 */
                 ///*
                 double maxRotation = 90;
-                double currentP = 30;
+                double currentP = 60;
                 
                 if (endpoint > maxRotation) {
                     System.out.println("ERROR");

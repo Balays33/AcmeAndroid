@@ -20,8 +20,8 @@ public class DataStand extends DataSit
     /*
     This variable should be set up the right position to stand
      */
-    private final double[] rotationIni ;    
-    private final double[] flextionIni ;    
+    private double[] rotationIni ;    
+    private double[] flextionIni ;    
 
     public DataStand() 
     {

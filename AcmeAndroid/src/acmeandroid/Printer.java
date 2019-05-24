@@ -98,17 +98,14 @@ public class Printer {
             mt = " flextionate ";
         }
 
-//<<<<<<< HEAD
         System.out.println("The motor " + motorNames[motorIndex] + mt 
                 + "from " + current + " to " + finalPositon 
                 + " degress consuming " + energyConsumed);
-//=======
         System.out.println(" ");
         System.out.println("The Android is currently moving.");
         System.out.println(" ");
         System.out.println("The motor " + motorNames[motorIndex] + mt + "from " + current + " to " + finalPositon + " degrees.");
         System.out.println("The battery has been consumed by " + energyConsumed + " Volts. ");
-//>>>>>>> 63cdb0e31f839c893c80c7fc7039a74cefbe1f0e
 
     }
 

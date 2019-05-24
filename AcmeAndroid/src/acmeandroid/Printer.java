@@ -28,12 +28,6 @@ public class Printer {
     }
     
     
-
-    public void setMotorNames() {
-
-        this.motorNames = d.getMotorName();
-    }
-
     /**
      * @param passObject MotorJoint object needs to be passed inside
      */

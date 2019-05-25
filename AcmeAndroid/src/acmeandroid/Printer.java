@@ -105,6 +105,10 @@ public class Printer {
 
     }
 
-
+    public void batteryMonitorInfo(double sixtydegree,double jointmove){
+        // print out  if movement is more than 60% of available motion for a motor
+        System.out.println("sixtydegree = " + sixtydegree);
+        System.out.println("joint move :" + jointmove);
+    }
     
 }

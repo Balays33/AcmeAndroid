@@ -24,7 +24,7 @@ public class Printer {
 
     public Printer()
     {
-       // this.motorNames = d.getMotorName();
+        this.motorNames = d.getMotorName();
     }
     
     public void setMotorNames() {

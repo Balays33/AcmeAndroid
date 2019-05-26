@@ -56,6 +56,11 @@ public class batteryMonitor {
     {
         this.printer = printer;
     }
+    public batteryMonitor(MotorJoint[] m, Printer printer )
+    {
+        this.m = m;
+        this.printer = printer;
+    }
     /*  deadend
     public void batteryCheck(double energyConsumption) throws InterruptedException
     {
@@ -87,7 +92,7 @@ public class batteryMonitor {
         switch (movementFlextionOrRotation) {
             case 0:   // Rotation = 0
                 /*
-                if (endpoint > m[index].getMaximumRotation() {
+                if (endpoint > m[index].getMaximumRotation()) {
                     System.out.print("ERROR");
                     movementAllow = false;
                 } else {
@@ -97,8 +102,8 @@ public class batteryMonitor {
                     } else {
                         sixtydegree = (m[index].getCurrentRotation()*0.6);
                     }
-                    System.out.println("sixtydegree = " + sixtydegree);
-                    System.out.println("joint moves :" + (endpoint - m[index].getCurrentRotation()));
+                    jointmove = endpoint - m[index].getCurrentRotation();
+                    printer.batteryMonitorInfo(sixtydegree,jointmove);
                     if (Math.abs(endpoint - m[index].getCurrentRotation()) > sixtydegree) {
                         //add extra 3 volt
                         System.out.println("add extra 3 volt ");
@@ -149,10 +154,9 @@ public class batteryMonitor {
                     } else {
                         sixtydegree = (m[index].getCurrentFlexion() *0.6);
                     }
-                    System.out.println("sixtydegree = " + sixtydegree);
-                    System.out.println("Flexion moves :" + (endpoint - m[index].getCurrentFlexion()));
+                    jointmove = endpoint - m[index].getCurrentFlexion();
+                    printer.batteryMonitorInfo(sixtydegree,jointmove);
                     if (Math.abs(endpoint - m[index].getCurrentFlexion()) > sixtydegree) {
-                        //add extra 3 volt
                         System.out.println("add extra 3 volt ");
                         energyConsumption = 3 + 3;
                         printer.printEnergyConsumption(energyConsumption);

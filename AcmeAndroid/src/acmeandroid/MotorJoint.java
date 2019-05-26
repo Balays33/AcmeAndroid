@@ -23,8 +23,6 @@ public class MotorJoint {
     private final double energyConsumption;
     private double currentRotation;
     private double currentFlexion;
-    private double motorCurrentPosition;
-    private double motorCurrentFlexion; // gettter and setter
 
 
     // gettter and setter

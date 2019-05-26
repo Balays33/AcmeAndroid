@@ -22,13 +22,13 @@ public class AcmeAndroid {
     
     public static void main(String[] args) {
         //parameters & constructors
-        Printer p = new Printer();
+        Printer printer = new Printer(); 
         Menu mn = new Menu();
         //flow
-        p.welcome();
+        printer.welcome();
         mn.showMenu();
         
-        Printer printer = new Printer();    
+           
         batteryMonitor bm = new batteryMonitor(printer);
         bm.setBatteryCurrentLevel(2);
         bm.allowMove(1, 0,78);

@@ -24,7 +24,7 @@ public class Printer {
 
     public Printer()
     {
-        this.motorNames = d.getMotorName();
+       // this.motorNames = d.getMotorName();
     }
     
     public void setMotorNames() {
@@ -112,6 +112,7 @@ public class Printer {
 
     }
 
+    // added new print 
     public void batteryMonitorInfo(double sixtydegree,double jointmove){
         // print out  if movement is more than 60% of available motion for a motor
         System.out.println("sixtydegree = " + sixtydegree);

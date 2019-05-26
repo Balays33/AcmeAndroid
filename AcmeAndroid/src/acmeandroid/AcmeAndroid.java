@@ -26,7 +26,7 @@ public class AcmeAndroid {
         Menu mn = new Menu();
         //flow
         printer.welcome();
-        mn.showMenu();
+        //mn.showMenu();
         
            
         batteryMonitor bm = new batteryMonitor(printer);

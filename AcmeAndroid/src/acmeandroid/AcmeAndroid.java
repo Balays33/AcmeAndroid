@@ -24,12 +24,12 @@ public class AcmeAndroid {
         //parameters & constructors
         Printer printer = new Printer(); 
         Menu mn = new Menu();
+        batteryMonitor bm = new batteryMonitor(printer);
         //flow
         printer.welcome();
-        //mn.showMenu();
+        mn.showMenu();
         
            
-        batteryMonitor bm = new batteryMonitor(printer);
         bm.setBatteryCurrentLevel(2);
         bm.allowMove(1, 0,78);
         /*

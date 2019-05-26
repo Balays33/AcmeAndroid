@@ -31,7 +31,7 @@ public class Menu {
 
     }
 
-    public void showMenu() 
+    public int showMenu() 
     {
         
     System.out.println(" ");
@@ -48,7 +48,8 @@ public class Menu {
     } 
     while ((menuNumber != 1) && (menuNumber != 2) && (menuNumber != 3) && (menuNumber != 4));
 
-    switch (menuNumber) {
+    switch (menuNumber) 
+    {
         case 1:
              System.out.println("Stand Up");
              //Set initial position sit
@@ -70,10 +71,10 @@ public class Menu {
         break;
         case 4:
              System.out.println(" Exit");
-
              System.exit(0);
             break;
     }
+    return menuNumber;
 }
 
 

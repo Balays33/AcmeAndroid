@@ -29,7 +29,6 @@ public class Setup
     
     private void printOutData(MotorJoint passObject){
         passObject.toString();
-
     }
     /**
      *
@@ -37,7 +36,7 @@ public class Setup
      */
 
     
-
+ 
     public MotorJoint[] setupMethod()
     {
         Data d = new Data();
@@ -49,8 +48,8 @@ public class Setup
             m[i]= new MotorJoint(d.getMaxRotation()[i],d.getMaxFlextion()[i],d.getEnergyConsumption()[i]);
         }
         return m;
-        
+
     }
-    
+
 }
-   
+    

@@ -98,6 +98,12 @@ public class Data {
     public String[] getMotorName() {
         return motorName;
     }
+    
+     // return String with specified one motor only
+    public String getMotorNameAt(int index) {
+        
+        return motorName[index];
+    }
 
     public double[] getEnergyConsumption() {
         return energyConsumption;

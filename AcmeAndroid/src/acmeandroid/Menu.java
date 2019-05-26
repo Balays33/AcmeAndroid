@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author MichaelTheProgrammer
  */
-public class Logic {
+public class Menu {
     
      private int menuNumber = 0;
 
@@ -20,7 +20,8 @@ public class Logic {
     
     //Here we put logic, what programm is doing step by step
     
-    public Printer printWelcome(Printer printer) {
+    public Printer printWelcome(Printer printer) 
+    {
 
         printer.welcome();
             return printer;
@@ -30,7 +31,8 @@ public class Logic {
 
     }
 
-    public void showMenu() {
+    public void showMenu() 
+    {
         
     System.out.println(" ");
     
@@ -43,16 +45,14 @@ public class Logic {
             System.out.printf(" 1-Stand up%n 2- Walk%n");
             System.out.printf(" 3- Sit Down%n 4- EXIT%n");
             Scanner scan = new Scanner(System.in);
-            
-
-            
             if (scan.hasNext()) 
             {
                 getInt();
                 
             }
 
-        } while ((menuNumber != 1) && (menuNumber != 2) && (menuNumber != 3) && (menuNumber != 4) && (menuNumber != 5));
+        } 
+        while ((menuNumber != 1) && (menuNumber != 2) && (menuNumber != 3) && (menuNumber != 4));
      
         switch (menuNumber) {
             case 1:

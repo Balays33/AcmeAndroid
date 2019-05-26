@@ -14,58 +14,59 @@ package acmeandroid;
  * @author Michał Świtała
  * 
  */
-public class DataStand {
-    
-     /*
-        This variable should be set up the right position to stand 
-    */
+public class DataStand extends DataSit
+{
 
     /*
-        This variable should be set up the right position to sit
-    */
-    private final double[] rotationIni = new double[]
-    {
-        0,//                "Head",//0  - All motors is inital at 0 when standing 
-        0,//                "Neck",//1    exept the ancle in 90 degress. 
-        0,//                "Shoulder-Right",
-        0,//                "Shoulder-Left",
-        0,//                "Elbow-Right",
-        0,//                "Elbow-Left",
-        0,//                "Wrist-Right",
-        0,//                "Wrist-Left",
-        0,//                "Waist",
-        0,//                "Hip-Right",
-        0,//                "Hip-Left",
-        0,//                "Knee-Right",
-        0,//                "Knee-Left",
-        90,//                "Ankle-Right",
-        90//                 "Ankle-Left"//14
-    };    
-    private final double[] flextionIni = new double[]
-    {
-        0,//                "Head",//0 - All initial position of the standing position is 
-        0,//                "Neck",//1   initialise with 0.  
-        0,//                "Shoulder-Right",
-        0,//                "Shoulder-Left",
-        0,//                "Elbow-Right",
-        0,//                "Elbow-Left",
-        0,//                "Wrist-Right",
-        0,//                "Wrist-Left",
-        0,//                "Waist",
-        0,//                "Hip-Right",
-        0,//                "Hip-Left",
-        0,//                "Knee-Right",
-        0,//                "Knee-Left",
-        0,//                "Ankle-Right",
-        0//                 "Ankle-Left"//14
-    };    
+    This variable should be set up the right position to stand
+     */
+    private double[] rotationIni ;    
+    private double[] flextionIni ;    
 
-    public double[] getRotation() {
-        return rotationIni;
+    public DataStand() 
+    {
+        rotationIni = new double[]
+        {
+            0,//                "Head",//0  - All motors is inital at 0 when standing 
+            0,//                "Neck",//1    exept the ancle in 90 degress. 
+            0,//                "Shoulder-Right",
+            0,//                "Shoulder-Left",
+            0,//                "Elbow-Right",
+            0,//                "Elbow-Left",
+            0,//                "Wrist-Right",
+            0,//                "Wrist-Left",
+            0,//                "Waist",
+            0,//                "Hip-Right",
+            0,//                "Hip-Left",
+            0,//                "Knee-Right",
+            0,//                "Knee-Left",
+            90,//                "Ankle-Right",
+            90//                 "Ankle-Left"//14
+        }; 
+        flextionIni = new double[]
+        {
+            0,//                "Head",//0 - All initial position of the standing position is 
+            0,//                "Neck",//1   initialise with 0.  
+            0,//                "Shoulder-Right",
+            0,//                "Shoulder-Left",
+            0,//                "Elbow-Right",
+            0,//                "Elbow-Left",
+            0,//                "Wrist-Right",
+            0,//                "Wrist-Left",
+            0,//                "Waist",
+            0,//                "Hip-Right",
+            0,//                "Hip-Left",
+            0,//                "Knee-Right",
+            0,//                "Knee-Left",
+            0,//                "Ankle-Right",
+            0//                 "Ankle-Left"//14
+        };
     }
 
-    public double[] getFlextion() {
-        return flextionIni;
-    }
-        
+
+    
+    
+    
+
+   
 }

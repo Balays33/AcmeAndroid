@@ -19,7 +19,7 @@ public class Printer {
     
    // Fields of data
        
-    private Data d;
+    private Data d = new Data();
     private String[] motorNames;
 
     public Printer()

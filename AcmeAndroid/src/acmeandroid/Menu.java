@@ -82,7 +82,6 @@ public class Menu {
     {
         try
         {
-//             System.out.println("Only numbers");
             Scanner scan = new Scanner(System.in);
             if (scan.hasNextInt()) 
             {

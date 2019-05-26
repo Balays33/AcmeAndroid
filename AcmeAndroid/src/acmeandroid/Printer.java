@@ -108,7 +108,20 @@ public class Printer {
     public void batteryMonitorInfo(double sixtydegree,double jointmove){
         // print out  if movement is more than 60% of available motion for a motor
         System.out.println("sixtydegree = " + sixtydegree);
-        System.out.println("joint move :" + jointmove);
+        System.out.println("join move :" + jointmove);
     }
+    
+    public void printMovmentTake(long sleepingMiliSecondsMovement){
+        System.out.println("The join is moving is take : " +sleepingMiliSecondsMovement + " milliseconds");
+    }
+    
+    public void printEnergyConsumption(double energyConsumption){
+        System.out.println("EnergyConsumption level: " + energyConsumption);
+    }
+    
+    public void printBatteryLevel(double batteryCurrentLevel){
+        System.out.println("Battery level : " + batteryCurrentLevel);
+    }
+    
     
 }

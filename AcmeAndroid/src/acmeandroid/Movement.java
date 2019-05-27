@@ -56,7 +56,7 @@ public class Movement
     {   
         MotorJoint mm;
         int[] move;
-        ssp.setupMethod(r, f,(MotorJoint[])mj); //set the initial position
+        ssp.setupMethod(r, f,mj); //set the initial position
         for(int i=0;i<moveSeq.size();i++)
         {
             move = (int[]) moveSeq.get(i);

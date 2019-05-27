@@ -19,45 +19,47 @@ import java.util.ArrayList;
 
 public class Movement 
 {
-    private DataMovement dm;
-    private DataSit ds;
-    private DataStand du;
-    private MotorJoint[] mj;
+    private DataMovement dm = new DataMovement();
+//    private DataInitial dIni;// = new DataInitial();
     private SetupStartPosition ssp;
     private batteryMonitor bm;
     public Movement() 
     {
     }
     
-    public void start(int input)
+    public void start(int input,MotorJoint[] mj)
     {
+//        dm = new DataMovement();
+        DataInitial dIni = new DataInitial(input);
+//        System.out.println("input: "+input);//debug porpouse
         switch (input)
         {
         case 1://stand up
-            moving(ds,dm.getStandUp());
+        System.out.println("rot: "+dIni.getRotation().length);//debug porpouse
+        System.out.println("flex: "+dIni.getFlextion().length);//debug porpouse
+        System.out.println("move: "+dm.getStandUp().size());//debug porpouse
+            moving(dIni.getRotation(), dIni.getFlextion(), (ArrayList)dm.getStandUp(),mj);
             break;
         case 2://walk
-            moving(du,dm.getWalkForward());
+            moving(dIni.getRotation(), dIni.getFlextion(), (ArrayList)dm.getStandUp(),mj);
             break;
         case 3://sit down
-            moving(du,dm.getSitDown());
+            moving(dIni.getRotation(), dIni.getFlextion(), (ArrayList)dm.getStandUp(),mj);
             break;
         default:
-            
             break;
-            
         }
         
     }
 
-    private void moving(DataSit d,ArrayList ar) 
+    private void moving(ArrayList moveSeq,MotorJoint[] mj) //(double[] r,double[] f,ArrayList moveSeq,MotorJoint[] mj) 
     {   
         MotorJoint mm;
         int[] move;
-        ssp.setupMethod(d.getRotation(), d.getFlextion()); //set the initial position
-        for(int i=0;i<ar.size();i++)
+//        ssp.setupMethod((double[])r, (double[])f,(MotorJoint[])mj); //set the initial position
+        for(int i=0;i<moveSeq.size();i++)
         {
-            move = (int[]) ar.get(i);
+            move = (int[]) moveSeq.get(i);
             bm.allowMove(move[0], move[1], (double)move[2]);
             //set motor to the required position
             mm = mj[move[0]];

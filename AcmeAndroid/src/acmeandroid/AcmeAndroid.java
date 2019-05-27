@@ -38,11 +38,10 @@ public class AcmeAndroid {
 
         
         
-        bm.setBatteryCurrentLevel(2);
-//        bm.allowMove(1, 0,78);
-        batteryMonitor bm = new batteryMonitor(printer);
+        
+        //batteryMonitor bm = new batteryMonitor(printer);
         bm.setBatteryCurrentLevel(3);
-        bm.allowMove(1, 0,36);
+        //bm.allowMove(1, 0,36);
         /*
         
         // comment by Michal

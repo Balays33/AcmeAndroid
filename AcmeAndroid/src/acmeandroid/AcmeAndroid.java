@@ -1,4 +1,3 @@
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -24,15 +23,26 @@ public class AcmeAndroid {
         //parameters & constructors
         Printer printer = new Printer(); 
         Menu mn = new Menu();
+        batteryMonitor bm ;//= new batteryMonitor(printer);
+        Movement mv = new Movement();
+        Setup st = new Setup();
+        MotorJoint[] mj;
         //flow
+        mj = st.setupMethod();
+//        System.out.println(mj.length);//debug porpouse
+        bm = new batteryMonitor(mj, printer);
+        bm.
         printer.welcome();
-        //mn.showMenu();
+        int input = mn.showMenu();
+        mv.start(input, mj);
+
         
-          
+        
+        bm.setBatteryCurrentLevel(2);
+//        bm.allowMove(1, 0,78);
         batteryMonitor bm = new batteryMonitor(printer);
         bm.setBatteryCurrentLevel(3);
-       // bm.allowMove(1, 0,36);
-        
+        bm.allowMove(1, 0,36);
         /*
         
         // comment by Michal

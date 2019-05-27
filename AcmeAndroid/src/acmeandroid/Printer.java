@@ -24,7 +24,7 @@ public class Printer {
 
     public Printer()
     {
-       // this.motorNames = d.getMotorName();
+        this.motorNames = d.getMotorName();
     }
     
     public void setMotorNames() {
@@ -112,11 +112,10 @@ public class Printer {
 
     }
 
-    // added new print 
-    public void batteryMonitorInfo(double sixtydegree,double jointmove){
+    // added new print by balazs
+    public void batteryMonitorInfo(double sixtydegree,double jointmove,double energyConsumption){
         // print out  if movement is more than 60% of available motion for a motor
-        System.out.println("sixtydegree = " + sixtydegree);
-        System.out.println("join move :" + jointmove);
+        System.out.println("sixtydegree = " + sixtydegree+" join move :" + jointmove+" EnergyConsumption level: " + energyConsumption);
     }
     
     public void printMovmentTake(long sleepingMiliSecondsMovement){
@@ -129,6 +128,10 @@ public class Printer {
     
     public void printBatteryLevel(double batteryCurrentLevel){
         System.out.println("Battery level : " + batteryCurrentLevel);
+    }
+    
+    public void printbatteryRecharge(double batteryCurrentLevel,double energyConsumption, long sleepingMiliSeconds){
+        System.out.println("The Android Battery level : " + batteryCurrentLevel+" EnergyConsumption level: " + energyConsumption+ " Battery is charging : " +sleepingMiliSeconds+ " miliseconds");
     }
     
 

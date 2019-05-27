@@ -174,7 +174,7 @@ public class batteryMonitor {
         }
         if (movementAllow){
             batteryRecharge(energyConsumption);
-            movement(batteryCurrentLevel,jointmove);
+            movement(batteryCurrentLevel,jointmove,energyConsumption);
             }
         
     }
@@ -198,7 +198,7 @@ public class batteryMonitor {
         }
     }
     
-    private void movement(double batteryCurrentLevel, double jointmove){
+    private void movement(double batteryCurrentLevel, double jointmove, double energyConsumption){
         
         sleepingMiliSecondsMovement = (long)((Math.abs(jointmove)/15)*1000);
         printer.printMovmentTake(sleepingMiliSecondsMovement);
@@ -217,7 +217,7 @@ public class batteryMonitor {
         } catch (InterruptedException ex) {
             Logger.getLogger(batteryMonitor.class.getName()).log(Level.SEVERE, null, ex);
         }
-    
+        batteryCurrentLevel = batteryCurrentLevel- energyConsumption;
     }
 
     public double getBatteryCurrentLevel() {

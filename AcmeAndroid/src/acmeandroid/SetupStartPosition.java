@@ -18,22 +18,21 @@ public class SetupStartPosition
 {
 
 
-    /**
-     * 
-     * @param r the current rotation values 
-     * @param f the current flexion values
-     * @param m MotorJoint array
-     * @return array within all motors
-     */
-    public MotorJoint[] setupMethod(double[] r,double[] f, MotorJoint[] m)
+//    /**
+//     * 
+//     * @param r the current rotation values 
+//     * @param f the current flexion values
+//     * @param m MotorJoint array
+//     * @return array within all motors
+//     */
+    public void setupMethod(double[] r,double[] f, MotorJoint[] m)
     {
-        Data d = new Data();
         //loop to update the motors in an array
-        for(int i=0;i<d.getMotorName().length;i++)
+        for(int i=0;i<r.length;i++)
         {
             m[i].setCurrentRotation(r[i]);
             m[i].setCurrentFlexion(f[i]);
         }
-        return m;
+//        return m;
     }  
 }

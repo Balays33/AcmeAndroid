@@ -16,7 +16,6 @@ package acmeandroid;
  */
 public class SetupStartPosition 
 {
-    MotorJoint[] m;
     Data d = new Data();
 
 
@@ -26,7 +25,7 @@ public class SetupStartPosition
      * @param f the current flexion values
      * @return array within all motors
      */
-    public MotorJoint[] setupMethod(double[] r,double[] f)
+    public MotorJoint[] setupMethod(double[] r,double[] f, MotorJoint[] m)
     {
     //        Ankle =  new MotorJoint(d.getAnkleRotation(), 0, 0, 0, d.getAnkleVoltage()); 
 // this is start should update it

@@ -27,10 +27,7 @@ public class DataInitial {
      */
     public DataInitial(int move) 
     {
-        if(move==1)
-        {
-            setSit();
-        }
+        if(move==1){setSit();}
         else{setStand();}
         
     }

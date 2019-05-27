@@ -39,10 +39,23 @@ public class DataMovement
 // flexion = 1 // rotation = 0
 // required degrees for the move    
         
-           move =new int[]{ 00 , 0 , 30 }; standUp.add(move);//motor, type of move and degrees
-           move =new int[]{ 00 , 0 , 40 }; standUp.add(move);//motor, type of move and degrees
+           move =new int[]{ 00 , 0 , 30 }; 
+           standUp.add(move);//motor, type of move and degrees
+           move =new int[]{ 00 , 0 , 40 }; 
+           standUp.add(move);//motor, type of move and degrees
     } 
 
+    
+    public void setStandToWalk() {
+
+        // fill data here
+        int[] move;
+
+        move = new int[]{00, 0, 30};
+        this.walkForward.add(move);
+
+    }
+    
     public ArrayList getStandUp() {
         return standUp;
     }

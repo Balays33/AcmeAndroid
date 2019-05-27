@@ -16,6 +16,12 @@ package acmeandroid;
  */
 public class DataSit {
     
+    
+    
+       
+    private double[] rotationIni;    
+    private double[] flextionIni;    
+
     /*
     This variable should be set up the right position to sit
      */
@@ -59,10 +65,7 @@ public class DataSit {
         };
     }
 
-    
-    private double[] rotationIni;    
-    private double[] flextionIni;    
-
+ 
     public double[] getRotation() {
         return rotationIni;
     }

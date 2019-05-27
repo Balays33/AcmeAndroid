@@ -91,7 +91,7 @@ public class batteryMonitor {
         //this.endpoint = endpoint;
         switch (movementFlextionOrRotation) {
             case 0:   // Rotation = 0
-                /*
+               // /*
                 if (endpoint > m[index].getMaximumRotation()) {
                     System.out.print("ERROR");
                     movementAllow = false;
@@ -103,7 +103,7 @@ public class batteryMonitor {
                         sixtydegree = (m[index].getCurrentRotation()*0.6);
                     }
                     jointmove = endpoint - m[index].getCurrentRotation();
-                    printer.batteryMonitorInfo(sixtydegree,jointmove);
+                    //printer.batteryMonitorInfo(sixtydegree,jointmove);
                     if (Math.abs(endpoint - m[index].getCurrentRotation()) > sixtydegree) {
                         //add extra 3 volt
                         System.out.println("add extra 3 volt ");
@@ -114,8 +114,9 @@ public class batteryMonitor {
                         printer.printEnergyConsumption(energyConsumption);
                     }
                 }
-                */
-                ///*
+                printer.batteryMonitorInfo(sixtydegree,jointmove,energyConsumption);
+                //*/
+                /*
                 double maxRotation = 90;
                 double currentP = 30;
                 
@@ -130,17 +131,18 @@ public class batteryMonitor {
                         sixtydegree = (currentP * 0.6);
                     }
                     jointmove = endpoint - currentP;
-                    printer.batteryMonitorInfo(sixtydegree,jointmove);
+                   // printer.batteryMonitorInfo(sixtydegree,jointmove);
                     if (Math.abs(endpoint - currentP) > sixtydegree) {
-                        System.out.println("add extra 3 volt ");
+                       // System.out.println("add extra 3 volt ");
                         energyConsumption = 3 + 3;
-                        printer.printEnergyConsumption(energyConsumption);
+                        //printer.printEnergyConsumption(energyConsumption);
                     } else {
                         energyConsumption = 3;
-                        printer.printEnergyConsumption(energyConsumption);
+                        //printer.printEnergyConsumption(energyConsumption);
                     }
                 }
-                //*/
+                printer.batteryMonitorInfo(sixtydegree,jointmove,energyConsumption);
+                */
                 break;
             case 1:   // flexion = 1 
                 ///*
@@ -155,7 +157,7 @@ public class batteryMonitor {
                         sixtydegree = (m[index].getCurrentFlexion() *0.6);
                     }
                     jointmove = endpoint - m[index].getCurrentFlexion();
-                    printer.batteryMonitorInfo(sixtydegree,jointmove);
+                    //printer.batteryMonitorInfo(sixtydegree,jointmove);
                     if (Math.abs(endpoint - m[index].getCurrentFlexion()) > sixtydegree) {
                         System.out.println("add extra 3 volt ");
                         energyConsumption = 3 + 3;
@@ -217,7 +219,9 @@ public class batteryMonitor {
         } catch (InterruptedException ex) {
             Logger.getLogger(batteryMonitor.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         batteryCurrentLevel = batteryCurrentLevel- energyConsumption;
+        System.out.println("batteryCurrentLevel :"+batteryCurrentLevel);
     }
 
     public double getBatteryCurrentLevel() {

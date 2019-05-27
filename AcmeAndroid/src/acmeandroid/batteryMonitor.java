@@ -58,7 +58,7 @@ public class batteryMonitor {
     }
     public batteryMonitor(MotorJoint[] mj, Printer printer )
     {
-        this.m = m;
+        this.m = mj;
         this.printer = printer;
     }
     /*  deadend

@@ -35,9 +35,9 @@ public class Movement
         switch (input)
         {
         case 1://stand up
-        System.out.println("rot: "+dIni.getRotation().length);//debug porpouse
-        System.out.println("flex: "+dIni.getFlextion().length);//debug porpouse
-        System.out.println("move: "+dm.getStandUp().size());//debug porpouse
+        System.out.println("rot array length: "+dIni.getRotation().length);//debug porpouse
+        System.out.println("flx array length: "+dIni.getFlextion().length);//debug porpouse
+        System.out.println("move array size: "+dm.getStandUp().size());//debug porpouse
             moving(dIni.getRotation(), dIni.getFlextion(), (ArrayList)dm.getStandUp(),mj);
             break;
         case 2://walk

@@ -22,29 +22,28 @@ public class AcmeAndroid {
     
     public static void main(String[] args) {
         //parameters & constructors
+        int input;
         Printer printer = new Printer(); 
         Menu mn = new Menu();
-        batteryMonitor bm ;//= new batteryMonitor(printer);
-        Movement mv;//= new Movement(bm);
+        batteryMonitor bm ;
+        Movement mv;
         Setup st = new Setup();
         MotorJoint[] mj;
         //flow
         mj = st.setupMethod();
-//        System.out.println(mj.length);//debug porpouse
         bm = new batteryMonitor(mj, printer);
-        mv= new Movement(bm);
         bm.setBatteryCurrentLevel(8);
+        mv= new Movement(bm);
         
         printer.welcome();
-        int input = mn.showMenu();
+        input = mn.showMenu();
         mv.start(input, mj);
-
         
         
         
-        //batteryMonitor bm = new batteryMonitor(printer);
-        bm.setBatteryCurrentLevel(3);
-        bm.allowMove(1, 0,28.8);
+//sequence to test the battery monitor class        
+//        bm.setBatteryCurrentLevel(3);
+//        bm.allowMove(1, 0,28.8);
         /*
         
         // comment by Michal

@@ -56,7 +56,7 @@ public class batteryMonitor {
     {
         this.printer = printer;
     }
-    public batteryMonitor(MotorJoint[] m, Printer printer )
+    public batteryMonitor(MotorJoint[] mj, Printer printer )
     {
         this.m = m;
         this.printer = printer;

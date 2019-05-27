@@ -25,14 +25,15 @@ public class AcmeAndroid {
         Printer printer = new Printer(); 
         Menu mn = new Menu();
         batteryMonitor bm ;//= new batteryMonitor(printer);
-        Movement mv= new Movement();
+        Movement mv;//= new Movement(bm);
         Setup st = new Setup();
         MotorJoint[] mj;
         //flow
         mj = st.setupMethod();
 //        System.out.println(mj.length);//debug porpouse
         bm = new batteryMonitor(mj, printer);
-        bm.setBatteryCurrentLevel(3);
+        mv= new Movement(bm);
+        bm.setBatteryCurrentLevel(8);
         
         printer.welcome();
         int input = mn.showMenu();

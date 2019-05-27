@@ -80,9 +80,9 @@ public class batteryMonitor {
      
     public boolean allowMove(int index, int movementFlextionOrRotation, double endpoint) {
         this.index = index;
-        this.endpoint = endpoint;
         this.movementFlextionOrRotation =movementFlextionOrRotation;
-        batteryRequire(index,movementFlextionOrRotation,endpoint);
+        this.endpoint = endpoint;
+            batteryRequire(index,movementFlextionOrRotation,endpoint);
         return movementAllow;    
     }
 
@@ -168,6 +168,7 @@ public class batteryMonitor {
                         
                     }
                 }
+                printer.batteryMonitorInfo(sixtydegree,jointmove,energyConsumption);
                 //*/
                 break;
             default:
@@ -182,15 +183,18 @@ public class batteryMonitor {
     }
     
     private void batteryRecharge(double energyConsumption){
-        System.out.println("Battery Recharge method: ");
-        printer.printBatteryLevel(batteryCurrentLevel);
-        printer.printEnergyConsumption(energyConsumption);
+        //System.out.println("Battery Recharge method: ");
+        //printer.printBatteryLevel(batteryCurrentLevel);
+        //printer.printEnergyConsumption(energyConsumption);
+        
         
         sleepingMiliSeconds = (long)(((energyConsumption + batteryMinLevel - batteryCurrentLevel)/8) * 3000);
-        System.out.println("sleepingMiliSeconds : " +sleepingMiliSeconds);
+        //System.out.println("sleepingMiliSeconds : " +sleepingMiliSeconds);
+        
+        printer.printbatteryRecharge(batteryCurrentLevel,energyConsumption,sleepingMiliSeconds);
         while (energyConsumption > (batteryCurrentLevel - batteryMinLevel)) {
             try {
-                System.out.println("Battery is charging ");
+                //System.out.println("Battery is charging ");
                 Thread.sleep(sleepingMiliSeconds);
                 batteryCurrentLevel = energyConsumption+1;
                 printer.printBatteryLevel(batteryCurrentLevel);

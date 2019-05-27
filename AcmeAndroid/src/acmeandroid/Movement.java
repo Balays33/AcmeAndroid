@@ -52,11 +52,11 @@ public class Movement
         
     }
 
-    private void moving(ArrayList moveSeq,MotorJoint[] mj) //(double[] r,double[] f,ArrayList moveSeq,MotorJoint[] mj) 
+    private void moving(double[] r,double[] f,ArrayList moveSeq,MotorJoint[] mj) 
     {   
         MotorJoint mm;
         int[] move;
-//        ssp.setupMethod((double[])r, (double[])f,(MotorJoint[])mj); //set the initial position
+        ssp.setupMethod(r, f,(MotorJoint[])mj); //set the initial position
         for(int i=0;i<moveSeq.size();i++)
         {
             move = (int[]) moveSeq.get(i);

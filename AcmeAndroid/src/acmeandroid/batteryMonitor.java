@@ -92,8 +92,11 @@ public class batteryMonitor {
         switch (movementFlextionOrRotation) {
             case 0:   // Rotation = 0
                // /*
+                System.out.println("endpoint: "+ endpoint);
+                System.out.println("maximum: "+ m[index].getMaximumRotation());
+                
                 if (endpoint > m[index].getMaximumRotation()) {
-                    System.out.print("ERROR");
+                    System.out.println("ERROR endpoint is bigger that max rotation range");
                     movementAllow = false;
                 } else {
 

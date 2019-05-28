@@ -23,7 +23,6 @@ public class AcmeAndroid {
     public static void main(String[] args) {
         //parameters & constructors
         int input;
-         
         Menu mn = new Menu();
         batteryMonitor bm ;
         Movement mv;

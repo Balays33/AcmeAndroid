@@ -18,6 +18,12 @@ public class DataMovement
     private ArrayList walkForward= new ArrayList();// ArayList to hold all moves
     private ArrayList sitDown= new ArrayList();// ArayList to hold all moves
 
+    public DataMovement() 
+    {
+        setSitToStand();
+        setStandToWalk();
+    }
+
     public void setSitToStand()
     {
            int[] move;

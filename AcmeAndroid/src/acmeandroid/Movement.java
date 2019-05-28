@@ -21,11 +21,12 @@ public class Movement
 {
     private DataMovement dm = new DataMovement();
 //    private DataInitial dIni;// = new DataInitial();
-    private SetupStartPosition ssp;
+    private SetupStartPosition ssp= new SetupStartPosition();
     private batteryMonitor bm;
-    public Movement() 
-    {
-    }
+//    private MotorJoint[] mj;
+    
+    public Movement(){}
+    public Movement(batteryMonitor b)    {        this.bm=b;    }
     
     public void start(int input,MotorJoint[] mj)
     {
@@ -35,16 +36,18 @@ public class Movement
         switch (input)
         {
         case 1://stand up
-        System.out.println("rot: "+dIni.getRotation().length);//debug porpouse
-        System.out.println("flex: "+dIni.getFlextion().length);//debug porpouse
-        System.out.println("move: "+dm.getStandUp().size());//debug porpouse
-            moving(dIni.getRotation(), dIni.getFlextion(), (ArrayList)dm.getStandUp(),mj);
+//        System.out.println("rot array length: "+dIni.getRotation().length);//debug porpouse
+//        System.out.println("flx array length: "+dIni.getFlextion().length);//debug porpouse
+//        System.out.println("move array size: "+dm.getStandUp().size());//debug porpouse
+//            System.out.println("Rotation "+dIni.toString(0));
+//            System.out.println("Flextion "+dIni.toString(1));
+            moving(dIni.getRotation(), dIni.getFlextion(), dm.getStandUp(),mj);
             break;
         case 2://walk
-            moving(dIni.getRotation(), dIni.getFlextion(), (ArrayList)dm.getStandUp(),mj);
+            moving(dIni.getRotation(), dIni.getFlextion(), dm.getWalkForward(),mj);
             break;
         case 3://sit down
-            moving(dIni.getRotation(), dIni.getFlextion(), (ArrayList)dm.getStandUp(),mj);
+            moving(dIni.getRotation(), dIni.getFlextion(), dm.getSitDown(),mj);
             break;
         default:
             break;
@@ -52,15 +55,24 @@ public class Movement
         
     }
 
-    private void moving(double[] r,double[] f,ArrayList moveSeq,MotorJoint[] mj) 
+    private void moving(double[] r,double[] f,ArrayList moveSeq, MotorJoint[] mj) 
     {   
         MotorJoint mm;
         int[] move;
         ssp.setupMethod(r, f,mj); //set the initial position
+
         for(int i=0;i<moveSeq.size();i++)
         {
             move = (int[]) moveSeq.get(i);
-            bm.allowMove(move[0], move[1], (double)move[2]);
+            System.out.println("motor "+move[0]);
+            System.out.println("1 for flextion: "+move[1]);
+            System.out.println("degrees "+move[2]);
+            
+            int mIdx = (int)move[0];
+            int mTyp = (int)move[1];
+            double degrees = (double)move[2];
+            
+            bm.allowMove(mIdx, mTyp, degrees);
             //set motor to the required position
             mm = mj[move[0]];
             if(move[1]==1)

@@ -27,10 +27,7 @@ public class DataInitial {
      */
     public DataInitial(int move) 
     {
-        if(move==1)
-        {
-            setSit();
-        }
+        if(move==1){setSit();}
         else{setStand();}
         
     }
@@ -133,5 +130,17 @@ public class DataInitial {
     public double getFlextionAt(int index) {
 
         return flextionIni[index];
+    }
+    public String toString(int MoveType)
+    {
+        String output="";
+        double[] initial;
+        if(MoveType==1)
+        {initial=flextionIni;}else{initial=rotationIni;}
+        for(int i=0;i<initial.length;i++)
+        {
+            output=output+" mj"+i+": "+initial[i];
+        }
+        return output;
     }
 }

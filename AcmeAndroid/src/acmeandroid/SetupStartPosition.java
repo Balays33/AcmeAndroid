@@ -16,26 +16,23 @@ package acmeandroid;
  */
 public class SetupStartPosition 
 {
-    Data d = new Data();
 
 
-    /**
-     * 
-     * @param r the current rotation values 
-     * @param f the current flexion values
-     * @return array within all motors
-     */
-    public MotorJoint[] setupMethod(double[] r,double[] f, MotorJoint[] m)
+//    /**
+//     * 
+//     * @param r the current rotation values 
+//     * @param f the current flexion values
+//     * @param m MotorJoint array
+//     * @return array within all motors
+//     */
+    public void setupMethod(double[] r,double[] f, MotorJoint[] m)
     {
-    //        Ankle =  new MotorJoint(d.getAnkleRotation(), 0, 0, 0, d.getAnkleVoltage()); 
-// this is start should update it
-
-        //loop to generate the motors in an array
-        for(int i=0;i<d.getMotorName().length;i++)
+        //loop to update the motors in an array
+        for(int i=0;i<r.length;i++)
         {
             m[i].setCurrentRotation(r[i]);
             m[i].setCurrentFlexion(f[i]);
         }
-        return m;
+//        return m;
     }  
 }

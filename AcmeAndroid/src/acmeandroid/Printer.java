@@ -104,26 +104,41 @@ public class Printer {
             mt = " flextionate ";
         }
 
-        System.out.println("The motor " + motorNames[motorIndex] + mt 
-                + "from " + current + " to " + finalPositon 
-                + " degress consuming " + energyConsumed);
         System.out.println(" ");
         System.out.println("The Android is currently moving.");
         System.out.println(" ");
-        System.out.println("The motor " + motorNames[motorIndex] + mt + "from " + current + " to " + finalPositon + " degrees.");
+        System.out.println("Motor " + motorNames[motorIndex] + mt + "from " + current + " to " + finalPositon + " degrees.");
         System.out.println("The battery has been consumed by " + energyConsumed + " Volts. ");
 
     }
 
     // added new print by balazs
-    public void batteryMonitorInfo(double sixtydegree,double jointmove,double energyConsumption){
+    public void printbatteryRequire(int motorIndex, double sixtydegree,double jointmove,double energyConsumption, double batteryCurrentLevel){
         // print out  if movement is more than 60% of available motion for a motor
-        System.out.println("sixtydegree = " + sixtydegree+" join move :" 
-                + jointmove+" EnergyConsumption level: " + energyConsumption);
+        System.out.println("Information about the motor: ");
+        System.out.println("Motor : " + motorNames[motorIndex] + " 60% available motion : " + sixtydegree+ " Motor movement : " + jointmove+" degree, need EnergyConsumption: " + energyConsumption+ " volts battery level:" + batteryCurrentLevel );
+        System.out.println("Motor name:"+ motorNames[motorIndex]+ "maximumRotation");
+        System.out.println("-------------------------------");
+    }
+    
+    public void printbatteryRequireRotation(int motorIndex, double sixtydegree,double jointmove,double energyConsumption, double batteryCurrentLevel, double endpoint){
+        // print out  if movement is more than 60% of available motion for a motor
+        System.out.println("Information about the motor: ");
+        System.out.println("Motor name: "+ motorNames[motorIndex]+ " Maximum Rotation: " +mj[motorIndex].getMaximumRotation()+ " Energy Consumption: " +mj[motorIndex].getEnergyConsumption() + " Current Rotation: " +mj[motorIndex].getCurrentRotation()+ 
+                            " moving position:" + endpoint+ " Battery CurrentLevel:"+ batteryCurrentLevel);
+        System.out.println("-------------------------------");
+    }
+    
+     public void printbatteryRequireFlexion(int motorIndex, double sixtydegree,double jointmove,double energyConsumption, double batteryCurrentLevel, double endpoint){
+        // print out  if movement is more than 60% of available motion for a motor
+        System.out.println("Information about the motor: ");
+        System.out.println("Motor name: "+ motorNames[motorIndex]+ " Maximum Flexion: " +mj[motorIndex].getMaximumFlexion()+ " Energy Consumption: " +mj[motorIndex].getEnergyConsumption() + " Current Flexion: " +mj[motorIndex].getCurrentFlexion()+ 
+                            " moving position:" + endpoint+ " Battery CurrentLevel:"+ batteryCurrentLevel);
+        System.out.println("-------------------------------");
     }
     
     public void printMovmentTake(long sleepingMiliSecondsMovement){
-        System.out.println("The joint move is take : " +sleepingMiliSecondsMovement + " milliseconds");
+        System.out.println((char)27 + "[35m Motor moving time : " +sleepingMiliSecondsMovement + " milliseconds");
     }
     
     public void printEnergyConsumption(double energyConsumption){
@@ -131,11 +146,14 @@ public class Printer {
     }
     
     public void printBatteryLevel(double batteryCurrentLevel){
-        System.out.println("Battery level : " + batteryCurrentLevel);
+        System.out.println("Battery NEW level : " + batteryCurrentLevel);
     }
     
     public void printbatteryRecharge(double batteryCurrentLevel,double energyConsumption, long sleepingMiliSeconds){
-        System.out.println("The Android Battery level : " + batteryCurrentLevel+" EnergyConsumption level: " + energyConsumption+ " Battery is charging : " +sleepingMiliSeconds+ " miliseconds");
+        // battery recharge method
+        System.out.println("Battery Recharge method: ");
+        System.out.println("Battery level : " + batteryCurrentLevel+" EnergyConsumption level: " + energyConsumption+ " Battery is charging : " +sleepingMiliSeconds+ " miliseconds");
+        System.out.println("-------------------------------");
     }
     
 

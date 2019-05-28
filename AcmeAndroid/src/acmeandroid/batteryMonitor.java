@@ -82,6 +82,7 @@ public class batteryMonitor {
         this.index = index;
         this.movementFlextionOrRotation =movementFlextionOrRotation;
         this.endpoint = endpoint;
+        System.out.println("batteryCurrentLevel before start "+batteryCurrentLevel);
             batteryRequire(index,movementFlextionOrRotation,endpoint);
         return movementAllow;    
     }
@@ -151,10 +152,10 @@ public class batteryMonitor {
     
     private void batteryRecharge(double energyConsumption){
         
-        sleepingMiliSeconds = (long)(((energyConsumption + batteryMinLevel - batteryCurrentLevel)/8) * 3000);
+        sleepingMiliSeconds = (long)(((energyConsumption + batteryMinLevel - this.batteryCurrentLevel)/8) * 3000);
         
         //printer.printbatteryRecharge(batteryCurrentLevel,energyConsumption,sleepingMiliSeconds);
-        while (energyConsumption > (batteryCurrentLevel - batteryMinLevel)) {
+        while (energyConsumption > (this.batteryCurrentLevel - batteryMinLevel)) {
        // while (batteryCurrentLevel <= (energyConsumption +batteryMinLevel)) {
             try {
                 System.out.println("Battery is charging ");
@@ -196,8 +197,8 @@ public class batteryMonitor {
             Logger.getLogger(batteryMonitor.class.getName()).log(Level.SEVERE, null, ex);
         }
        // batteryCurrentLevel = (batteryCurrentLevel-(double)((double)sleepingMiliSecondsMovement/1000)*(energyConsumption));
-        batteryCurrentLevel = batteryCurrentLevel- energyConsumption;
-        System.out.println("after move batteryCurrentLevel :"+batteryCurrentLevel);
+        this.batteryCurrentLevel = this.batteryCurrentLevel- energyConsumption;
+        System.out.println("after move batteryCurrentLevel :"+this.batteryCurrentLevel);
         System.out.println("-------------------------------");
     }
 

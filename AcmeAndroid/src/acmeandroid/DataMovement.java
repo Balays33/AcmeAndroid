@@ -57,7 +57,14 @@ public class DataMovement
         // fill data here
         int[] move;
         
-        //                  Position 0
+        // Notes : I didnt add rotation for every motor. Just added rotation when it occurs according to our documentation.
+        
+        
+        /*
+            
+                        POSITION 0 data
+        
+        */
         
         //Ankle left            { motor name, rotation or flextion , degree }
         move = new int[]{14, 1, 0};
@@ -66,16 +73,67 @@ public class DataMovement
         //Ankle right
         move = new int[]{13, 1, 30};
         this.walkForward.add(move);
-        
+
         //Knee left
-        move = new int[]{14, 1, 0};
+        move = new int[]{12, 1, 0};
         this.walkForward.add(move);
 
         //Knee right
         move = new int[]{13, 1, 30};
         this.walkForward.add(move);
-        
 
+        //Hip left
+        move = new int[]{14, 1, 0};
+        this.walkForward.add(move);
+
+        //Hip right
+        move = new int[]{13, 1, 30};
+        this.walkForward.add(move);
+
+        //Weist
+        move = new int[]{13, 1, 30};
+        this.walkForward.add(move);
+
+        //Wrist left
+        move = new int[]{13, 1, 30};
+        this.walkForward.add(move);
+
+        //Wrist right
+        move = new int[]{13, 1, 30};
+        this.walkForward.add(move);
+
+        //Elbow left
+        move = new int[]{13, 1, 30};
+        this.walkForward.add(move);
+
+        //Elbow right
+        move = new int[]{13, 1, 30};
+        this.walkForward.add(move);
+
+        //Shoulder left
+        move = new int[]{13, 1, 30};
+        this.walkForward.add(move);
+
+        //Shoulder right
+        move = new int[]{13, 1, 30};
+        this.walkForward.add(move);
+
+        //Neck
+        move = new int[]{13, 1, 30};
+        this.walkForward.add(move);
+
+        //Head
+        move = new int[]{13, 1, 30};
+        this.walkForward.add(move);
+
+        /*
+            
+                        POSITION 1 data
+        
+        */
+        
+        
+        
     }
     
     public ArrayList getStandUp() {

@@ -56,9 +56,25 @@ public class DataMovement
 
         // fill data here
         int[] move;
-
-        move = new int[]{00, 0, 30};
+        
+        //                  Position 0
+        
+        //Ankle left            { motor name, rotation or flextion , degree }
+        move = new int[]{14, 1, 0};
         this.walkForward.add(move);
+
+        //Ankle right
+        move = new int[]{13, 1, 30};
+        this.walkForward.add(move);
+        
+        //Knee left
+        move = new int[]{14, 1, 0};
+        this.walkForward.add(move);
+
+        //Knee right
+        move = new int[]{13, 1, 30};
+        this.walkForward.add(move);
+        
 
     }
     

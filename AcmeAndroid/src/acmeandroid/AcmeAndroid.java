@@ -36,7 +36,7 @@ public class AcmeAndroid {
         mv= new Movement(bm);
         
         printer.welcome();
-        int input = mn.showMenu();
+        input = mn.showMenu();
         mv.start(input, mj);
 
         

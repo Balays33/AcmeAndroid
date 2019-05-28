@@ -46,8 +46,6 @@ public class AcmeAndroid {
         bm.setBatteryCurrentLevel(3);
         //bm.allowMove(2, 0,12);
 
-        input = mn.showMenu();
-        mv.start(input, mj);
         
         
         

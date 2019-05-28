@@ -64,9 +64,9 @@ public class Movement
         for(int i=0;i<moveSeq.size();i++)
         {
             move = (int[]) moveSeq.get(i);
-            System.out.println("motor "+move[0]);
-            System.out.println("1 for flextion: "+move[1]);
-            System.out.println("degrees "+move[2]);
+//            System.out.println("motor "+move[0]);//debug porpouse
+//            System.out.println("1 for flextion: "+move[1]);//debug porpouse
+//            System.out.println("degrees "+move[2]);//debug porpouse
             
             int mIdx = (int)move[0];
             int mTyp = (int)move[1];

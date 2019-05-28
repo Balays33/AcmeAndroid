@@ -23,7 +23,6 @@ public class AcmeAndroid {
     public static void main(String[] args) {
         //parameters & constructors
         int input;
-        Printer printer = new Printer(); 
         Menu mn = new Menu();
         batteryMonitor bm ;
         Movement mv;
@@ -31,6 +30,7 @@ public class AcmeAndroid {
         MotorJoint[] mj;
         //flow
         mj = st.setupMethod();
+        Printer printer = new Printer(mj); 
         bm = new batteryMonitor(mj, printer);
         bm.setBatteryCurrentLevel(8);
         mv= new Movement(bm);

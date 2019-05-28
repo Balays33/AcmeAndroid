@@ -21,9 +21,12 @@ public class Printer {
        
     private Data d = new Data();
     private String[] motorNames;
-
-    public Printer()
+    private MotorJoint[] mj;
+    
+    
+     public Printer(MotorJoint[] mj)
     {
+        this.mj = mj;
         this.motorNames = d.getMotorName();
     }
     
@@ -115,11 +118,12 @@ public class Printer {
     // added new print by balazs
     public void batteryMonitorInfo(double sixtydegree,double jointmove,double energyConsumption){
         // print out  if movement is more than 60% of available motion for a motor
-        System.out.println("sixtydegree = " + sixtydegree+" join move :" + jointmove+" EnergyConsumption level: " + energyConsumption);
+        System.out.println("sixtydegree = " + sixtydegree+" join move :" 
+                + jointmove+" EnergyConsumption level: " + energyConsumption);
     }
     
     public void printMovmentTake(long sleepingMiliSecondsMovement){
-        System.out.println("The join is moving is take : " +sleepingMiliSecondsMovement + " milliseconds");
+        System.out.println("The joint move is take : " +sleepingMiliSecondsMovement + " milliseconds");
     }
     
     public void printEnergyConsumption(double energyConsumption){

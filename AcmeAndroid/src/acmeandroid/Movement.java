@@ -33,6 +33,8 @@ public class Movement
 //        dm = new DataMovement();
         DataInitial dIni = new DataInitial(input);
 //        System.out.println("input: "+input);//debug porpouse
+        ssp.setupMethod(dIni.getRotation(), dIni.getFlextion(),mj); //set the initial position
+
         switch (input)
         {
         case 1://stand up
@@ -41,13 +43,13 @@ public class Movement
 //        System.out.println("move array size: "+dm.getStandUp().size());//debug porpouse
 //            System.out.println("Rotation "+dIni.toString(0));
 //            System.out.println("Flextion "+dIni.toString(1));
-            moving(dIni.getRotation(), dIni.getFlextion(), dm.getStandUp(),mj);
+            moving( dm.getStandUp(),mj);
             break;
         case 2://walk
-            moving(dIni.getRotation(), dIni.getFlextion(), dm.getWalkForward(),mj);
+            moving( dm.getWalkForward(),mj);
             break;
         case 3://sit down
-            moving(dIni.getRotation(), dIni.getFlextion(), dm.getSitDown(),mj);
+            moving( dm.getSitDown(),mj);
             break;
         default:
             break;
@@ -55,11 +57,10 @@ public class Movement
         
     }
 
-    private void moving(double[] r,double[] f,ArrayList moveSeq, MotorJoint[] mj) 
+    private void moving(ArrayList moveSeq, MotorJoint[] mj) 
     {   
         MotorJoint mm;
         int[] move;
-        ssp.setupMethod(r, f,mj); //set the initial position
 
         for(int i=0;i<moveSeq.size();i++)
         {

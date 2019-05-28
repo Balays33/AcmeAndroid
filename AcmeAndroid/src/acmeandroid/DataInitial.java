@@ -38,25 +38,7 @@ public class DataInitial {
             0,//                "Head",//0  - All motors is inital at 0 when standing 
             0,//                "Neck",//1    exept the ancle in 90 degress. 
             0,//                "Shoulder-Right",
-            0,//                "Shoulder-Left",
-            0,//                "Elbow-Right",
-            0,//                "Elbow-Left",
-            0,//                "Wrist-Right",
-            0,//                "Wrist-Left",
-            0,//                "Waist",
-            0,//                "Hip-Right",
-            0,//                "Hip-Left",
-            0,//                "Knee-Right",
-            0,//                "Knee-Left",
-            90,//                "Ankle-Right",
-            90//                 "Ankle-Left"//14
-        }; 
-        flextionIni = new double[]
-        {
-            0,//                "Head",//0 - All initial position of the standing position is 
-            0,//                "Neck",//1   initialise with 0.  
-            0,//                "Shoulder-Right",
-            0,//                "Shoulder-Left",
+            40,//                "Shoulder-Left",
             0,//                "Elbow-Right",
             0,//                "Elbow-Left",
             0,//                "Wrist-Right",
@@ -68,6 +50,24 @@ public class DataInitial {
             0,//                "Knee-Left",
             0,//                "Ankle-Right",
             0//                 "Ankle-Left"//14
+        }; 
+        flextionIni = new double[]
+        {
+            0,//               0 "Head",//0 - All initial position of the standing position is 
+            0,//               1 "Neck",//1   initialise with 0.  
+            0,//               2 "Shoulder-Right",
+            0,//               3 "Shoulder-Left",
+            90,//               4 "Elbow-Right",
+            90,//               5 "Elbow-Left",
+            0,//               6 "Wrist-Right",
+            0,//              7  "Wrist-Left",
+            15,//              8  "Waist",
+            0,//              9  "Hip-Right",
+            90,//              10  "Hip-Left",
+            45,//              11  "Knee-Right",
+            0,//              12  "Knee-Left",
+            30,//              13  "Ankle-Right",
+            0//               14  "Ankle-Left"//14
         };
     }
 
@@ -77,17 +77,17 @@ public class DataInitial {
             {
                 0,//                "Head",//0
                 0,//                "Neck",//1
-                25,//                "Shoulder-Right",
-                25,//                "Shoulder-Left",
-                45,//                "Elbow-Right",
-                45,//                "Elbow-Left",
+                15,//                "Shoulder-Right",
+                15,//                "Shoulder-Left",
+                60,//                "Elbow-Right",
+                60,//                "Elbow-Left",
                 0,//                "Wrist-Right",
                 0,//                "Wrist-Left",
                 0,//                "Waist",
                 90,//                "Hip-Right",
                 90,//                "Hip-Left",
-                135,//                "Knee-Right",
-                135,//                "Knee-Left",
+                45,//                "Knee-Right",
+                45,//                "Knee-Left",
                 45,//                "Ankle-Right",
                 45//                 "Ankle-Left"//14
             };

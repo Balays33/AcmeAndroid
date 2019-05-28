@@ -32,7 +32,7 @@ public class AcmeAndroid {
         mj = st.setupMethod();
         Printer printer = new Printer(mj); 
         bm = new batteryMonitor(mj, printer);
-        bm.setBatteryCurrentLevel(8);
+        bm.setBatteryCurrentLevel(2);
         mv= new Movement(bm);
         
         printer.welcome();

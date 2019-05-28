@@ -82,7 +82,7 @@ public class batteryMonitor {
         this.index = index;
         this.movementFlextionOrRotation =movementFlextionOrRotation;
         this.endpoint = endpoint;
-        System.out.println("batteryCurrentLevel before start "+batteryCurrentLevel);
+        //System.out.println("batteryCurrentLevel before start "+batteryCurrentLevel);
             batteryRequire(index,movementFlextionOrRotation,endpoint);
         return movementAllow;    
     }
@@ -108,10 +108,8 @@ public class batteryMonitor {
                         //add extra 3 volt
                         System.out.println("add extra 3 volt ");
                         energyConsumption = m[index].getEnergyConsumption() + 3;
-                       // printer.printEnergyConsumption(energyConsumption);
                     } else {
                         energyConsumption = m[index].getEnergyConsumption();
-                        //printer.printEnergyConsumption(energyConsumption);
                     }
                 }
                 printer.printbatteryRequireRotation(index, sixtydegree, jointmove, energyConsumption, batteryCurrentLevel, endpoint);
@@ -158,13 +156,13 @@ public class batteryMonitor {
         while (energyConsumption > (this.batteryCurrentLevel - batteryMinLevel)) {
        // while (batteryCurrentLevel <= (energyConsumption +batteryMinLevel)) {
             try {
-                System.out.println("Battery is charging ");
-                System.out.println("batteryCurrentLevel "+batteryCurrentLevel);
+                //System.out.println("Battery is charging ");
+                //System.out.println("batteryCurrentLevel "+batteryCurrentLevel);
                 //System.out.println("sleepingMiliSeconds "+sleepingMiliSeconds);
-                System.out.println("sleepingMiliSeconds*(8/3000) "+(double)sleepingMiliSeconds*(8/3)/1000);
+                //System.out.println("sleepingMiliSeconds*(8/3000) "+(double)sleepingMiliSeconds*(8/3)/1000);
                 //batteryCurrentLevel = (batteryCurrentLevel+(double)((double)sleepingMiliSeconds/1000)*(8/3)); 
                 batteryCurrentLevel = energyConsumption+1;
-                System.out.println("batteryCurrentLevel "+batteryCurrentLevel);
+                //System.out.println("batteryCurrentLevel "+batteryCurrentLevel);
                 //printer.printBatteryLevel(batteryCurrentLevel);
                 printer.printbatteryRecharge(batteryCurrentLevel,energyConsumption,sleepingMiliSeconds);
                 Thread.sleep(sleepingMiliSeconds);

@@ -39,7 +39,24 @@ public class Data {
         "Ankle-Right",//    13
         "Ankle-Left"//      14
     };
-    private final int[] priorization= new int[]
+    private final double[][] zeroReference = new double[][]
+    {//rotation,flexion
+        {0,90},//"Ankle-Right",//   13
+        {0,90},//"Ankle-Left"//     14
+        {0,0}, //"Waist",//          8
+        {0,0}, //"Hip-Right",//      9
+        {0,0},//"Hip-Left",//      10
+        {0,0},//"Knee-Right",//    11
+        {0,0},//"Knee-Left",//     12
+        {0,0}, //"Elbow-Right",//    4
+        {0,0}, //"Elbow-Left",//     5
+        {0,0}, //"Shoulder-Right",// 2
+        {0,0}, //"Shoulder-Left",//  3
+        {0,0}, //"Wrist-Right",//    6
+        {0,0}, //"Wrist-Left",//     7
+        {0,0}, //"Neck",//           1
+        {0,0}  //"Head",//           0
+    };    private final int[] priorization= new int[]
     {
         13,//"Ankle-Right",//   13
         14,//"Ankle-Left"//     14

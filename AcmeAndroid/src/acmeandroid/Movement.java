@@ -92,7 +92,7 @@ public class Movement
         }
     }
     
-    private ArrayList movePairs(ArrayList moveSeq)
+    private ArrayList sincro(ArrayList moveSeq)
     {
         Data dt = new Data();
         dt.getPairs();

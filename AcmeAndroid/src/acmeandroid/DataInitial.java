@@ -88,8 +88,8 @@ public class DataInitial {
                 90,//                "Hip-Left",
                 45,//                "Knee-Right",
                 45,//                "Knee-Left",
-                45,//                "Ankle-Right",
-                45//                 "Ankle-Left"//14
+                0,//                "Ankle-Right",
+                0//                 "Ankle-Left"//14
             };
             flextionIni = new double[]
             {

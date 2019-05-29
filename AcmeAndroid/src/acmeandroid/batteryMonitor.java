@@ -69,6 +69,7 @@ public class batteryMonitor {
         this.index = index;
         this.movementFlextionOrRotation =movementFlextionOrRotation;
         this.endpoint = endpoint;
+        //System.out.println((char)27 + "[33m CYAN");
             batteryRequire(index,movementFlextionOrRotation,endpoint);
         return movementAllow;    
     }

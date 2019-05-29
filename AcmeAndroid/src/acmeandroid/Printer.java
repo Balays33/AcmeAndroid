@@ -107,8 +107,8 @@ public class Printer {
         //System.out.println(" ");
         System.out.println("The Android is currently moving.");
         System.out.println(" ");
-        System.out.println("Motor " + motorNames[motorIndex] + mt + "from " + current + " to " + finalPositon + " degrees.");
-        System.out.println("The battery has been consumed by " + energyConsumed + " Volts. ");
+        System.out.println("Motor " + motorNames[motorIndex] + mt + "from " +(char)27 + "[33m"+ current +  (char)27 + "[30m to " +(char)27 + "[33m" + finalPositon + (char)27 + "[30m degrees.");
+        System.out.println("The battery has been consumed by " + (char)27 + "[32m" + energyConsumed*1000+ " mV  ");
 
     }
 
@@ -117,18 +117,24 @@ public class Printer {
     
     public void printbatteryRequireRotation(int motorIndex, double sixtydegree,double jointmove,double energyConsumption, double batteryCurrentLevel, double endpoint){
         // print out  if movement is more than 60% of available motion for a motor
-        System.out.println("Information about the motor: ");
-        System.out.println("Motor name: "+ motorNames[motorIndex]+ " Maximum Rotation: " +mj[motorIndex].getMaximumRotation()+ " Move requires: " + energyConsumption*1000+ " mV  Current Rotation: " +mj[motorIndex].getCurrentRotation()+ 
-                            " moving position: " + endpoint+ " Battery Current Level: "+ batteryCurrentLevel+ " Volts");
+        System.out.println((char)27 + "[30m Information about the motor: ");
+        System.out.println("Motor name: "+ motorNames[motorIndex]+ 
+                            " Maximum Rotation: " +mj[motorIndex].getMaximumRotation()+ 
+                            " Move requires: " +(char)27 + "[32m" + energyConsumption*1000+ " mV  "+(char)27 + "[30m" + 
+                            " Current Rotation: " +(char)27 + "[33m" +mj[motorIndex].getCurrentRotation()+ 
+                             (char)27 + "[30m" +" moving position: " + (char)27 + "[33m" +endpoint+(char)27 + "[30m" +" Battery Current Level: "+ batteryCurrentLevel+ " Volts");
         System.out.println("-------------------------------");
-    }
+    }                                                                                                                                           
     
      public void printbatteryRequireFlexion(int motorIndex, double sixtydegree,double jointmove,double energyConsumption, double batteryCurrentLevel, double endpoint){
         // print out  if movement is more than 60% of available motion for a motor
-        System.out.println("Information about the motor: ");
-        System.out.println("Motor name: "+ motorNames[motorIndex]+ " Maximum Flexion: " +mj[motorIndex].getMaximumFlexion()+ " Move requires: " + energyConsumption*1000+ " mV   Current Flexion: " +mj[motorIndex].getCurrentFlexion()+ 
-                            " moving position: " + endpoint+ " Battery Current Level: "+ batteryCurrentLevel+ " Volts");
-        System.out.println("-------------------------------");
+        System.out.println((char)27 + "[30m Information about the motor: ");
+        System.out.println("Motor name: "+ motorNames[motorIndex]+ 
+                            " Maximum Flexion: " +mj[motorIndex].getMaximumFlexion()+ 
+                            " Move requires: " +(char)27 + "[32m" + energyConsumption*1000+ " mV  "+(char)27 + "[30m" + 
+                            " Current Flexion: " + mj[motorIndex].getCurrentFlexion()+ 
+                             (char)27 + "[30m" +" moving position: " +(char)27 + "[33m" + endpoint+ (char)27 + "[30m" +" Battery Current Level: "+ (char)27 + "[34m" +batteryCurrentLevel+ " Volts");
+        System.out.println((char)27 + "[30m-------------------------------");
     }
     
     public void printMovmentTake(long sleepingMiliSecondsMovement){
@@ -147,7 +153,7 @@ public class Printer {
         // battery recharge method
         System.out.println("Battery Recharge method: ");
         System.out.println((char)27 + "[35m Battery is charging time : " +sleepingMiliSeconds + " milliseconds");
-        System.out.println("Battery level after the charge : " + batteryCurrentLevel+" Volts   Move requires: " + energyConsumption*1000+ " mV");
+        System.out.println((char)27 + "[30m Battery level after the charge : " + (char)27 + "[34m" +batteryCurrentLevel+ " Volts"+ (char)27 +"[0m Move requires: " + (char)27 + "[32m" + energyConsumption*1000+ " mV  "+(char)27 + "[30m");
         System.out.println("-------------------------------");
     }
     

@@ -56,7 +56,7 @@ public class Data {
         {0,0}, //"Wrist-Left",//     7
         {0,0}, //"Neck",//           1
         {0,0}  //"Head",//           0
-    };    private final int[] priorization= new int[]
+    };    private final int[] priorisation= new int[]
     {
         13,//"Ankle-Right",//   13
         14,//"Ankle-Left"//     14
@@ -161,12 +161,17 @@ public class Data {
 
     }
 
-    public int[] getPriorization() {
-        return priorization;
+    public int[] getPriorisation() {
+        return priorisation;
     }
 
     public int[][] getPairs() {
         return pairs;
     }
+
+    public double[][] getZeroReference() {
+        return zeroReference;
+    }
+    
 
 }

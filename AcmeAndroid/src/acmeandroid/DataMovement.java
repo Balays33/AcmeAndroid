@@ -84,73 +84,43 @@ public class DataMovement
         int[] move;
         
         // Notes : I didnt add rotation for every motor. Just added rotation when it occurs according to our documentation.
-        
-        
-        /*
-            
-                        POSITION 0 data
-        
+       
+        /*         
+                        POSITION 0 data    
         */
-        
         //Ankle left            { motor name, rotation or flextion , degree }
-        move = new int[]{14, 1, 0};
-        this.walkForward.add(move);
-
+        move = new int[]{14, 1, 0};     this.walkForward.add(move);    
         //Ankle right
-        move = new int[]{13, 1, 30};
-        this.walkForward.add(move);
-
+        move = new int[]{13, 1, 30};    this.walkForward.add(move);
         //Knee left
-        move = new int[]{12, 1, 0};
-        this.walkForward.add(move);
-
+        move = new int[]{12, 1, 0};      this.walkForward.add(move);
         //Knee right
-        move = new int[]{13, 1, 30};
-        this.walkForward.add(move);
-
+        move = new int[]{11, 1, 45};     this.walkForward.add(move);  
         //Hip left
-        move = new int[]{14, 1, 0};
-        this.walkForward.add(move);
-
+        move = new int[]{10, 1, 90};         this.walkForward.add(move);
         //Hip right
-        move = new int[]{13, 1, 30};
-        this.walkForward.add(move);
-
+        move = new int[]{9, 1, 0};    this.walkForward.add(move);
         //Weist
-        move = new int[]{13, 1, 30};
-        this.walkForward.add(move);
-
+        move = new int[]{8, 1, 15};   this.walkForward.add(move);
         //Wrist left
-        move = new int[]{13, 1, 30};
-        this.walkForward.add(move);
-
+        move = new int[]{7, 1, 0};    this.walkForward.add(move); 
         //Wrist right
-        move = new int[]{13, 1, 30};
-        this.walkForward.add(move);
-
+        move = new int[]{6, 1, 0};      this.walkForward.add(move);
         //Elbow left
-        move = new int[]{13, 1, 30};
-        this.walkForward.add(move);
-
+        move = new int[]{5, 1, 90};        this.walkForward.add(move);
         //Elbow right
-        move = new int[]{13, 1, 30};
-        this.walkForward.add(move);
-
+        move = new int[]{4, 1, 90};    this.walkForward.add(move);
         //Shoulder left
-        move = new int[]{13, 1, 30};
-        this.walkForward.add(move);
-
+        move = new int[]{3, 1, 0};       this.walkForward.add(move);
+         //Shoulder left - rotation
+        move = new int[]{3, 0, 40};       this.walkForward.add(move);
         //Shoulder right
-        move = new int[]{13, 1, 30};
-        this.walkForward.add(move);
-
+        move = new int[]{2, 1, 0};    this.walkForward.add(move);
         //Neck
-        move = new int[]{13, 1, 30};
-        this.walkForward.add(move);
-
+        move = new int[]{1, 1, 0};     this.walkForward.add(move);
         //Head
-        move = new int[]{13, 1, 30};
-        this.walkForward.add(move);
+        move = new int[]{0, 1, 0};    this.walkForward.add(move);
+        
 
         /*
             

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AcmeAndroid">
+  <ClassDiagramComponents>
+    <Class name="AcmeAndroid" package="acmeandroid" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="batteryMonitor" package="acmeandroid" visibility="public" xPosition="422.0" yPosition="33.0">
+      <Fields>
+        <Field name="energyConsumption" type="double" visibility="private"/>
+        <Field name="batteryMinLevel" type="int" visibility="private" isFinal="true"/>
+        <Field name="batteryMaxLevel" type="int" visibility="private" isFinal="true"/>
+        <Field name="batteryCurrentLevel" type="double" visibility="private"/>
+        <Field name="index" type="int" visibility="private"/>
+        <Field name="endpoint" type="double" visibility="private"/>
+        <Field name="movementFlextionOrRotation" type="int" visibility="private"/>
+        <Field name="sleepingMiliSeconds" type="long" visibility="private"/>
+        <Field name="movementAllow" type="boolean" visibility="private"/>
+        <Field name="movement" type="double" visibility="private"/>
+        <Field name="sixtydegree" type="double" visibility="private"/>
+        <Field name="jointmove" type="double" visibility="private"/>
+        <Field name="sleepingMiliSecondsMovement" type="long" visibility="private"/>
+        <Field name="m" type="MotorJoint[]" visibility="package"/>
+        <Field name="printer" type="Printer" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="MotorJoint[]" name="m"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Printer" name="printer"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="MotorJoint[]" name="mj"/>
+          <Argument type="Printer" name="printer"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="allowMove" returnType="boolean" visibility="public">
+          <Argument type="int" name="index"/>
+          <Argument type="int" name="movementFlextionOrRotation"/>
+          <Argument type="double" name="endpoint"/>
+        </Method>
+        <Method name="batteryRequire" returnType="void" visibility="private">
+          <Argument type="int" name="index"/>
+          <Argument type="int" name="movementFlextionOrRotation"/>
+          <Argument type="double" name="endpoint"/>
+        </Method>
+        <Method name="batteryRecharge" returnType="void" visibility="private">
+          <Argument type="double" name="energyConsumption"/>
+        </Method>
+        <Method name="movement" returnType="void" visibility="private">
+          <Argument type="double" name="batteryCurrentLevel"/>
+          <Argument type="double" name="jointmove"/>
+          <Argument type="double" name="energyConsumption"/>
+        </Method>
+        <Method name="getBatteryCurrentLevel" returnType="double" visibility="public"/>
+        <Method name="setBatteryCurrentLevel" returnType="void" visibility="public">
+          <Argument type="double" name="batteryCurrentLevel"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Data" package="acmeandroid" visibility="public" xPosition="11.0" yPosition="476.0">
+      <Fields>
+        <Field name="motorName" type="String[]" visibility="public"/>
+        <Field name="energyConsumption" type="double[]" visibility="private" isFinal="true"/>
+        <Field name="MaxFlextion" type="double[]" visibility="private" isFinal="true"/>
+        <Field name="MaxRotation" type="double[]" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getMotorName" returnType="String[]" visibility="public"/>
+        <Method name="getMotorNameAt" returnType="String" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="getEnergyConsumption" returnType="double[]" visibility="public"/>
+        <Method name="getMaxFlextion" returnType="double[]" visibility="public"/>
+        <Method name="getMaxRotation" returnType="double[]" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DataInitial" package="acmeandroid" visibility="public" xPosition="20.0" yPosition="165.0">
+      <Fields>
+        <Field name="rotationIni" type="double[]" visibility="private"/>
+        <Field name="flextionIni" type="double[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="move"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setStand" returnType="void" visibility="private"/>
+        <Method name="setSit" returnType="void" visibility="private"/>
+        <Method name="getRotation" returnType="double[]" visibility="public"/>
+        <Method name="getFlextion" returnType="double[]" visibility="public"/>
+        <Method name="getRotationAt" returnType="double" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="getFlextionAt" returnType="double" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public">
+          <Argument type="int" name="MoveType"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DataMovement" package="acmeandroid" visibility="public" xPosition="1123.0" yPosition="33.0">
+      <Fields>
+        <Field name="standUp" type="ArrayList" visibility="private"/>
+        <Field name="walkForward" type="ArrayList" visibility="private"/>
+        <Field name="sitDown" type="ArrayList" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setSitToStand" returnType="void" visibility="public"/>
+        <Method name="setStandToWalk" returnType="void" visibility="public"/>
+        <Method name="getStandUp" returnType="ArrayList" visibility="public"/>
+        <Method name="getWalkForward" returnType="ArrayList" visibility="public"/>
+        <Method name="getSitDown" returnType="ArrayList" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Menu" package="acmeandroid" visibility="public" xPosition="1.0" yPosition="836.0">
+      <Fields>
+        <Field name="menuNumber" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="printWelcome" returnType="Printer" visibility="public">
+          <Argument type="Printer" name="printer"/>
+        </Method>
+        <Method name="setup" returnType="void" visibility="public"/>
+        <Method name="showMenu" returnType="int" visibility="public"/>
+        <Method name="getInt" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MotorJoint" package="acmeandroid" visibility="public" xPosition="1342.0" yPosition="751.0">
+      <Fields>
+        <Field name="maximumRotation" type="double" visibility="private" isFinal="true"/>
+        <Field name="maximumFlexion" type="double" visibility="private" isFinal="true"/>
+        <Field name="energyConsumption" type="double" visibility="private" isFinal="true"/>
+        <Field name="currentRotation" type="double" visibility="private"/>
+        <Field name="currentFlexion" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="maximumRotation"/>
+          <Argument type="double" name="maximumFlexion"/>
+          <Argument type="double" name="energyConsumption"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMaximumRotation" returnType="double" visibility="public"/>
+        <Method name="getCurrentRotation" returnType="double" visibility="public"/>
+        <Method name="getMaximumFlexion" returnType="double" visibility="public"/>
+        <Method name="getCurrentFlexion" returnType="double" visibility="public"/>
+        <Method name="getEnergyConsumption" returnType="double" visibility="public"/>
+        <Method name="setCurrentRotation" returnType="void" visibility="public">
+          <Argument type="double" name="currentRotation"/>
+        </Method>
+        <Method name="setCurrentFlexion" returnType="void" visibility="public">
+          <Argument type="double" name="currentFlexion"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Movement" package="acmeandroid" visibility="public" xPosition="1118.0" yPosition="387.0">
+      <Fields>
+        <Field name="dm" type="DataMovement" visibility="private"/>
+        <Field name="ssp" type="SetupStartPosition" visibility="private"/>
+        <Field name="bm" type="batteryMonitor" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="batteryMonitor" name="b"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="int" name="input"/>
+          <Argument type="MotorJoint[]" name="mj"/>
+        </Method>
+        <Method name="moving" returnType="void" visibility="private">
+          <Argument type="ArrayList" name="moveSeq"/>
+          <Argument type="MotorJoint[]" name="mj"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Printer" package="acmeandroid" visibility="public" xPosition="322.0" yPosition="718.0">
+      <Fields>
+        <Field name="d" type="Data" visibility="private"/>
+        <Field name="motorNames" type="String[]" visibility="private"/>
+        <Field name="mj" type="MotorJoint[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="MotorJoint[]" name="mj"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setMotorNames" returnType="void" visibility="public"/>
+        <Method name="printOutData" returnType="void" visibility="public">
+          <Argument type="MotorJoint" name="passObject"/>
+        </Method>
+        <Method name="welcome" returnType="void" visibility="public"/>
+        <Method name="sittingPosition" returnType="void" visibility="public">
+          <Argument type="int" name="motorIndex"/>
+          <Argument type="double" name="current"/>
+          <Argument type="double" name="batteryEnergy"/>
+        </Method>
+        <Method name="standingPosition" returnType="void" visibility="public">
+          <Argument type="int" name="motorIndex"/>
+          <Argument type="double" name="current"/>
+          <Argument type="double" name="batteryEnergy"/>
+        </Method>
+        <Method name="printMove" returnType="void" visibility="public">
+          <Argument type="int" name="motorIndex"/>
+          <Argument type="int" name="moveType"/>
+          <Argument type="double" name="current"/>
+          <Argument type="double" name="finalPositon"/>
+          <Argument type="double" name="energyConsumed"/>
+        </Method>
+        <Method name="printbatteryRequire" returnType="void" visibility="public">
+          <Argument type="int" name="motorIndex"/>
+          <Argument type="double" name="sixtydegree"/>
+          <Argument type="double" name="jointmove"/>
+          <Argument type="double" name="energyConsumption"/>
+          <Argument type="double" name="batteryCurrentLevel"/>
+        </Method>
+        <Method name="printbatteryRequireRotation" returnType="void" visibility="public">
+          <Argument type="int" name="motorIndex"/>
+          <Argument type="double" name="sixtydegree"/>
+          <Argument type="double" name="jointmove"/>
+          <Argument type="double" name="energyConsumption"/>
+          <Argument type="double" name="batteryCurrentLevel"/>
+          <Argument type="double" name="endpoint"/>
+        </Method>
+        <Method name="printbatteryRequireFlexion" returnType="void" visibility="public">
+          <Argument type="int" name="motorIndex"/>
+          <Argument type="double" name="sixtydegree"/>
+          <Argument type="double" name="jointmove"/>
+          <Argument type="double" name="energyConsumption"/>
+          <Argument type="double" name="batteryCurrentLevel"/>
+          <Argument type="double" name="endpoint"/>
+        </Method>
+        <Method name="printMovmentTake" returnType="void" visibility="public">
+          <Argument type="long" name="sleepingMiliSecondsMovement"/>
+        </Method>
+        <Method name="printEnergyConsumption" returnType="void" visibility="public">
+          <Argument type="double" name="energyConsumption"/>
+        </Method>
+        <Method name="printBatteryLevel" returnType="void" visibility="public">
+          <Argument type="double" name="batteryCurrentLevel"/>
+        </Method>
+        <Method name="printbatteryRecharge" returnType="void" visibility="public">
+          <Argument type="double" name="batteryCurrentLevel"/>
+          <Argument type="double" name="energyConsumption"/>
+          <Argument type="long" name="sleepingMiliSeconds"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Setup" package="acmeandroid" visibility="public" xPosition="1666.0" yPosition="438.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="printOutData" returnType="void" visibility="private">
+          <Argument type="MotorJoint" name="passObject"/>
+        </Method>
+        <Method name="setupMethod" returnType="MotorJoint[]" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SetupStartPosition" package="acmeandroid" visibility="public" xPosition="1430.0" yPosition="109.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="setupMethod" returnType="void" visibility="public">
+          <Argument type="double[]" name="r"/>
+          <Argument type="double[]" name="f"/>
+          <Argument type="MotorJoint[]" name="m"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="acmeandroid.SetupStartPosition" target="acmeandroid.MotorJoint" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="acmeandroid.Printer" target="acmeandroid.MotorJoint" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="bm" source="acmeandroid.Movement" target="acmeandroid.batteryMonitor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="printer" source="acmeandroid.batteryMonitor" target="acmeandroid.Printer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="d" source="acmeandroid.Printer" target="acmeandroid.Data" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="acmeandroid.Setup" target="acmeandroid.MotorJoint" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dm" source="acmeandroid.Movement" target="acmeandroid.DataMovement" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ssp" source="acmeandroid.Movement" target="acmeandroid.SetupStartPosition" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="SetupStartPosition"/>
+    <UseRelation source="acmeandroid.Menu" target="acmeandroid.Printer" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="acmeandroid.Movement" target="acmeandroid.MotorJoint" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

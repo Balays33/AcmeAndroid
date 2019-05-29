@@ -27,6 +27,11 @@ public class Movement
     public Movement(){}
     public Movement(batteryMonitor b)    {        this.bm=b;    }
     
+    /**
+     * 
+     * @param input user selected option (1 to 4)
+     * @param mj all motors
+     */
     public void start(int input,MotorJoint[] mj)
     {
 //        dm = new DataMovement();
@@ -56,7 +61,11 @@ public class Movement
         
     }
     
-
+/**
+ * 
+ * @param movePositions all sequential positions with all respective angles for all motors
+ * @param mj All motors
+ */
     private void moving(ArrayList movePositions, MotorJoint[] mj) 
     {   
         MotorJoint mm;
@@ -96,7 +105,11 @@ public class Movement
             }
         }
     }
-    
+    /**
+     * 
+     * @param moveSeq
+     * @return 
+     */
     private ArrayList synchroZeroReference(ArrayList moveSeq)
     {
         Data dt = new Data();

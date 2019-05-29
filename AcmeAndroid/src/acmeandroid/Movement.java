@@ -57,37 +57,42 @@ public class Movement
     }
     
 
-    private void moving(ArrayList moveSeq, MotorJoint[] mj) 
+    private void moving(ArrayList movePositions, MotorJoint[] mj) 
     {   
         MotorJoint mm;
         int[] move;
-
-        for(int i=0;i<moveSeq.size();i++)
+        ArrayList moveSeq;
+            
+        for(int j=0;j<movePositions.size();j++)
         {
-            move = (int[]) moveSeq.get(i);
-//            System.out.println("motor "+move[0]);//debug porpouse
-//            System.out.println("1 for flextion: "+move[1]);//debug porpouse
-//            System.out.println("degrees "+move[2]);//debug porpouse
-            
-            int mIdx = (int)move[0];
-            int mTyp = (int)move[1];
-            double endPos = (double)move[2];
-            mm = mj[move[0]];
-            double iniPos = 0;
-            
-            if(move[1]==1)
-                { iniPos = mm.getCurrentFlexion(); }
-            else
-                { iniPos = mm.getCurrentRotation(); }
-            
-            if(iniPos!=endPos)
+            moveSeq=(ArrayList)movePositions.get(j);
+            for(int i=0;i<moveSeq.size();i++)
             {
-                bm.allowMove(mIdx, mTyp, endPos);
-                //set motor to the required position
+                move = (int[]) moveSeq.get(i);
+    //            System.out.println("motor "+move[0]);//debug porpouse
+    //            System.out.println("1 for flextion: "+move[1]);//debug porpouse
+    //            System.out.println("degrees "+move[2]);//debug porpouse
+
+                int mIdx = (int)move[0];
+                int mTyp = (int)move[1];
+                double endPos = (double)move[2];
+                mm = mj[move[0]];
+                double iniPos = 0;
+
                 if(move[1]==1)
-                    { mm.setCurrentFlexion((double)move[2]); }
+                    { iniPos = mm.getCurrentFlexion(); }
                 else
-                    { mm.setCurrentRotation((double)move[2]); }
+                    { iniPos = mm.getCurrentRotation(); }
+
+                if(iniPos!=endPos)
+                {
+                    bm.allowMove(mIdx, mTyp, endPos);
+                    //set motor to the required position
+                    if(move[1]==1)
+                        { mm.setCurrentFlexion((double)move[2]); }
+                    else
+                        { mm.setCurrentRotation((double)move[2]); }
+                }
             }
         }
     }
@@ -96,13 +101,21 @@ public class Movement
     {
         Data dt = new Data();
         dt.getZeroReference();//{rot,flex}[mjIdx]
-        
-        
-    
+        //not implemented cause where not time enought to work this through
     }
+
     private ArrayList synchroPriorisation(ArrayList moveSeq)
     {
         Data dt = new Data();
+        
+        for(int j=0;j<moveSeq.size();j++)
+        {
+            for(int i=0;i<moveSeq.size();i++)
+            {
+
+            }
+        }
+        
         dt.getPriorisation();
         
         

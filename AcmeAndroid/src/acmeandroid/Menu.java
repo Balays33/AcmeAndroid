@@ -41,8 +41,7 @@ public class Menu {
 
         System.out.println(" ");
         System.out.println((char)27 + "[35m Please choose the search (1-2-3-4) method: ");
-        System.out.printf(" 1-Stand up%n 2- Walk%n");
-        System.out.printf(" 3- Sit Down%n 4- EXIT%n");
+        System.out.printf(" 1- Stand up %n 2- Walk %n 3- Sit Down %n 4- EXIT %n");
             getInt();
 
     } 
@@ -51,26 +50,26 @@ public class Menu {
     switch (menuNumber) 
     {
         case 1:
-             System.out.println("Stand Up");
+             System.out.println(" Stand Up%n");
              //Set initial position sit
              //Set final position stand up
              //Call method
             break;
         case 2:
-             System.out.println(" walk ");
+             System.out.println(" walk %n");
              //Set initial position stand up
              //Walk 3 steps
              //Set final position stand up
              //Call method
             break;
         case 3:
-             System.out.println(" sit down ");
+             System.out.println(" sit down %n");
               //Set initial position stand up
              //Set final position sit down
              //Call method
         break;
         case 4:
-             System.out.println(" Exit");
+             System.out.println(" Exit %n");
              System.exit(0);
             break;
     }

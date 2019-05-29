@@ -92,11 +92,27 @@ public class Movement
         }
     }
     
-    private ArrayList sincro(ArrayList moveSeq)
+    private ArrayList synchroZeroReference(ArrayList moveSeq)
+    {
+        Data dt = new Data();
+        dt.getZeroReference();//{rot,flex}[mjIdx]
+        
+        
+    
+    }
+    private ArrayList synchroPriorisation(ArrayList moveSeq)
+    {
+        Data dt = new Data();
+        dt.getPriorisation();
+        
+        
+    
+    }
+    private ArrayList synchroPair(ArrayList moveSeq)
     {
         Data dt = new Data();
         dt.getPairs();
-        dt.getPriorization();
+
         
         
     

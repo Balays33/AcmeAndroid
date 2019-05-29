@@ -44,11 +44,37 @@ public class DataMovement
 //14       "Ankle-Left"//14
 // flexion = 1 // rotation = 0
 // required degrees for the move    
-        
-           move =new int[]{ 00 , 0 , 30 }; 
-           standUp.add(move);//motor, type of move and degrees
-           move =new int[]{ 00 , 0 , 40 }; 
-           standUp.add(move);//motor, type of move and degrees
+        //position 1
+        move = new int[]{14, 1, 45};         this.standUp.add(move);
+        move = new int[]{13, 1, 45};         this.standUp.add(move);
+        move = new int[]{12, 1, 45};         this.standUp.add(move);
+        move = new int[]{11, 1, 45};         this.standUp.add(move);
+        move = new int[]{5, 1, 15};         this.standUp.add(move);
+        move = new int[]{4, 1, 15};         this.standUp.add(move);
+        //position 2
+        move = new int[]{5, 1, 15};         this.standUp.add(move);
+        move = new int[]{4, 1, 15};         this.standUp.add(move);
+        move = new int[]{3, 1, 15};         this.standUp.add(move);
+        move = new int[]{2, 1, 15};         this.standUp.add(move);
+        //position 3
+        move = new int[]{10, 1, 15};         this.standUp.add(move);
+        move = new int[]{9, 1, 15};         this.standUp.add(move);
+        move = new int[]{8, 1, 15};         this.standUp.add(move);
+        //position 4
+        move = new int[]{14, 1, 15};         this.standUp.add(move);
+        move = new int[]{13, 1, 15};         this.standUp.add(move);
+        move = new int[]{12, 1, 15};         this.standUp.add(move);
+        move = new int[]{11, 1, 15};         this.standUp.add(move);
+        //position 5
+        move = new int[]{14, 1, 15};         this.standUp.add(move);
+        move = new int[]{13, 1, 15};         this.standUp.add(move);
+        move = new int[]{12, 1, 75};         this.standUp.add(move);
+        move = new int[]{11, 1, 75};         this.standUp.add(move);
+        move = new int[]{10, 1, 75};         this.standUp.add(move);
+        move = new int[]{9, 1, 75};         this.standUp.add(move);
+        move = new int[]{8, 1, 15};         this.standUp.add(move);
+
+
     } 
 
     

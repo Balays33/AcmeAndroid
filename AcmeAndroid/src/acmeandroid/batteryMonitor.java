@@ -61,19 +61,6 @@ public class batteryMonitor {
         this.m = mj;
         this.printer = printer;
     }
-    /*  deadend
-    public void batteryCheck(double energyConsumption) throws InterruptedException
-    {
-        this.energyConsumption = energyConsumption;
-        
-        // battery check recharge
-        if (batteryCurrentLevel == batteryMinLevel){
-            miliseconds=0;
-            Thread.sleep(miliseconds);
-        }
-    
-    }
-    */
     
     
     
@@ -82,7 +69,6 @@ public class batteryMonitor {
         this.index = index;
         this.movementFlextionOrRotation =movementFlextionOrRotation;
         this.endpoint = endpoint;
-        //System.out.println("batteryCurrentLevel before start "+batteryCurrentLevel);
             batteryRequire(index,movementFlextionOrRotation,endpoint);
         return movementAllow;    
     }
@@ -116,7 +102,7 @@ public class batteryMonitor {
                 break;
             case 1:   // flexion = 1 
                 ///*
-                if ((endpoint > m[index].getCurrentFlexion()) || (endpoint < 0)) {
+                if ((endpoint > m[index].getMaximumFlexion()) || (endpoint < 0)) {
                     System.out.print("ERROR endpoint is bigger that max flexion range or smaller that min flexion range");
                     movementAllow = false;
                 } else {

@@ -113,27 +113,21 @@ public class Printer {
     }
 
     // added new print by balazs
-    public void printbatteryRequire(int motorIndex, double sixtydegree,double jointmove,double energyConsumption, double batteryCurrentLevel){
-        // print out  if movement is more than 60% of available motion for a motor
-        System.out.println("Information about the motor: ");
-        System.out.println("Motor : " + motorNames[motorIndex] + " 60% available motion : " + sixtydegree+ " Motor movement : " + jointmove+" degree, need EnergyConsumption: " + energyConsumption+ " volts battery level:" + batteryCurrentLevel );
-        System.out.println("Motor name:"+ motorNames[motorIndex]+ "maximumRotation");
-        System.out.println("-------------------------------");
-    }
+                                                                                                                                         
     
     public void printbatteryRequireRotation(int motorIndex, double sixtydegree,double jointmove,double energyConsumption, double batteryCurrentLevel, double endpoint){
         // print out  if movement is more than 60% of available motion for a motor
         System.out.println("Information about the motor: ");
-        System.out.println("Motor name: "+ motorNames[motorIndex]+ " Maximum Rotation: " +mj[motorIndex].getMaximumRotation()+ " Energy Consumption Total: " +energyConsumption + " Current Rotation: " +mj[motorIndex].getCurrentRotation()+ 
-                            " moving position:" + endpoint+ " Battery Current Level:"+ batteryCurrentLevel);
+        System.out.println("Motor name: "+ motorNames[motorIndex]+ " Maximum Rotation: " +mj[motorIndex].getMaximumRotation()+ " Move requires: " + energyConsumption*1000+ " mV  Current Rotation: " +mj[motorIndex].getCurrentRotation()+ 
+                            " moving position: " + endpoint+ " Battery Current Level: "+ batteryCurrentLevel+ " Volts");
         System.out.println("-------------------------------");
     }
     
      public void printbatteryRequireFlexion(int motorIndex, double sixtydegree,double jointmove,double energyConsumption, double batteryCurrentLevel, double endpoint){
         // print out  if movement is more than 60% of available motion for a motor
         System.out.println("Information about the motor: ");
-        System.out.println("Motor name: "+ motorNames[motorIndex]+ " Maximum Flexion: " +mj[motorIndex].getMaximumFlexion()+ " Energy Consumption Total: " +energyConsumption + " Current Flexion: " +mj[motorIndex].getCurrentFlexion()+ 
-                            " moving position:" + endpoint+ " Battery Current Level:"+ batteryCurrentLevel);
+        System.out.println("Motor name: "+ motorNames[motorIndex]+ " Maximum Flexion: " +mj[motorIndex].getMaximumFlexion()+ " Move requires: " + energyConsumption*1000+ " mV   Current Flexion: " +mj[motorIndex].getCurrentFlexion()+ 
+                            " moving position: " + endpoint+ " Battery Current Level: "+ batteryCurrentLevel+ " Volts");
         System.out.println("-------------------------------");
     }
     
@@ -153,7 +147,7 @@ public class Printer {
         // battery recharge method
         System.out.println("Battery Recharge method: ");
         System.out.println((char)27 + "[35m Battery is charging time : " +sleepingMiliSeconds + " milliseconds");
-        System.out.println("Battery level after the charge : " + batteryCurrentLevel+" EnergyConsumption level: " + energyConsumption);
+        System.out.println("Battery level after the charge : " + batteryCurrentLevel+" Volts   Move requires: " + energyConsumption*1000+ " mV");
         System.out.println("-------------------------------");
     }
     

@@ -182,7 +182,7 @@ public class batteryMonitor {
         }
        // batteryCurrentLevel = (batteryCurrentLevel-(double)((double)sleepingMiliSecondsMovement/1000)*(energyConsumption));
         this.batteryCurrentLevel = this.batteryCurrentLevel- energyConsumption;
-        System.out.println("after move batteryCurrentLevel :"+this.batteryCurrentLevel);
+        System.out.println("After move the Battery Current Level :"+this.batteryCurrentLevel+ " Volts");
         System.out.println("-------------------------------");
     }
 

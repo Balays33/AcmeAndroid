@@ -71,18 +71,23 @@ public class Movement
             
             int mIdx = (int)move[0];
             int mTyp = (int)move[1];
-            double degrees = (double)move[2];
-            
-            bm.allowMove(mIdx, mTyp, degrees);
-            //set motor to the required position
+            double endPos = (double)move[2];
             mm = mj[move[0]];
+            double iniPos = 0;
+            
             if(move[1]==1)
-            {
-                mm.setCurrentFlexion((double)move[2]);
-            }
+                { iniPos = mm.getCurrentFlexion(); }
             else
+                { iniPos = mm.getCurrentRotation(); }
+            
+            if(iniPos!=endPos)
             {
-                mm.setCurrentRotation((double)move[2]);
+                bm.allowMove(mIdx, mTyp, endPos);
+                //set motor to the required position
+                if(move[1]==1)
+                    { mm.setCurrentFlexion((double)move[2]); }
+                else
+                    { mm.setCurrentRotation((double)move[2]); }
             }
         }
     }

@@ -50,26 +50,26 @@ public class Menu {
     switch (menuNumber) 
     {
         case 1:
-             System.out.println(" Stand Up%n");
+             System.out.printf(" Stand Up%n");
              //Set initial position sit
              //Set final position stand up
              //Call method
             break;
         case 2:
-             System.out.println(" walk %n");
+             System.out.printf(" walk %n");
              //Set initial position stand up
              //Walk 3 steps
              //Set final position stand up
              //Call method
             break;
         case 3:
-             System.out.println(" sit down %n");
+             System.out.printf(" sit down %n");
               //Set initial position stand up
              //Set final position sit down
              //Call method
         break;
         case 4:
-             System.out.println(" Exit %n");
+             System.out.printf(" Exit %n");
              System.exit(0);
             break;
     }

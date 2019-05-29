@@ -83,7 +83,7 @@ public class Data {
         3,//                "Ankle-Right",
         3//                 "Ankle-Left"//14
     };    
-    private final double[] MaxFlextion = new double[]
+    private final double[] MaxRotation = new double[]
     {
         180,//                "Head",//0
         0,//                "Neck",//1
@@ -101,7 +101,7 @@ public class Data {
         0,//                "Ankle-Right",
         0//                 "Ankle-Left"//14
     };    
-    private final double[] MaxRotation = new double[]
+    private final double[] MaxFlextion = new double[]
     {
         180,//                "Head",//0
         30,//                "Neck",//1

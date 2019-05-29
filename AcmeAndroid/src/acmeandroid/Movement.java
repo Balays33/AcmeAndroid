@@ -20,7 +20,6 @@ import java.util.ArrayList;
 public class Movement 
 {
     private DataMovement dm = new DataMovement();
-//    private DataInitial dIni;// = new DataInitial();
     private SetupStartPosition ssp= new SetupStartPosition();
     private batteryMonitor bm;
 //    private MotorJoint[] mj;
@@ -56,6 +55,7 @@ public class Movement
         }
         
     }
+    
 
     private void moving(ArrayList moveSeq, MotorJoint[] mj) 
     {   
@@ -92,5 +92,14 @@ public class Movement
         }
     }
     
+    private ArrayList movePairs(ArrayList moveSeq)
+    {
+        Data dt = new Data();
+        dt.getPairs();
+        dt.getPriorization();
+        
+        
+    
+    }
 
 }

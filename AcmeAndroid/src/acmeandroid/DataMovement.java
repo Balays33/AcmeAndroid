@@ -46,8 +46,8 @@ public class DataMovement
 // required degrees for the move    
         //position 1
         
-        move = new int[]{14, 1, 45};           this.standUp.add(move);// Ankle left : 30 deg.   Voltage required : 3 volts
-        move = new int[]{13, 1, 45};           this.standUp.add(move);// Ankle right: 30 deg.   Voltage required : 3 volts
+        move = new int[]{14, 1, 15};           this.standUp.add(move);// Ankle left : 30 deg.   Voltage required : 3 volts
+        move = new int[]{13, 1, 15};           this.standUp.add(move);// Ankle right: 30 deg.   Voltage required : 3 volts
         move = new int[]{12, 1, 45};           this.standUp.add(move);// Knee Left :90 deg.  Voltage required : 3 volts
         move = new int[]{11, 1, 45};           this.standUp.add(move);// Kne Right :90 deg.  Voltage required : 3 volts
         move = new int[]{5, 1, 15};           this.standUp.add(move);// Elbow left : 140 deg. Voltage required : 3 volts
@@ -66,15 +66,15 @@ public class DataMovement
         move = new int[]{3, 1, 15};           this.standUp.add(move);// Shoulder Left : 360 rotation / 180 flexion. Voltage required : 2 volts
         move = new int[]{2, 1, 15};           this.standUp.add(move);// Shoulder right : 360 rotation / 180 flexion. Voltage required : 2 volts
         //position 4
-        move = new int[]{14, 1, 15};           this.standUp.add(move);// Ankle left : 30 deg.   Voltage required : 3 volts
-        move = new int[]{13, 1, 15};           this.standUp.add(move);// Ankle right: 30 deg.   Voltage required : 3 volts
+        move = new int[]{14, 1, 10};           this.standUp.add(move);// Ankle left : 30 deg.   Voltage required : 3 volts
+        move = new int[]{13, 1, 10};           this.standUp.add(move);// Ankle right: 30 deg.   Voltage required : 3 volts
         move = new int[]{12, 1, 15};           this.standUp.add(move);// Knee Left :90 deg.  Voltage required : 3 volts
         move = new int[]{11, 1, 15};           this.standUp.add(move);// Kne Right :90 deg.  Voltage required : 3 volts
         move = new int[]{3, 1, 5};           this.standUp.add(move);// Shoulder Left : 360 rotation / 180 flexion. Voltage required : 2 volts
         move = new int[]{2, 1, 5};           this.standUp.add(move);// Shoulder right : 360 rotation / 180 flexion. Voltage required : 2 volts
         //position 5
-        move = new int[]{14, 1, 15};           this.standUp.add(move);// Ankle left : 30 deg.   Voltage required : 3 volts
-        move = new int[]{13, 1, 15};           this.standUp.add(move);// Ankle right: 30 deg.   Voltage required : 3 volts
+        move = new int[]{14, 1, 10};           this.standUp.add(move);// Ankle left : 30 deg.   Voltage required : 3 volts
+        move = new int[]{13, 1, 10};           this.standUp.add(move);// Ankle right: 30 deg.   Voltage required : 3 volts
         move = new int[]{12, 1, 75};           this.standUp.add(move);// Knee Left :90 deg.  Voltage required : 3 volts
         move = new int[]{11, 1, 75};           this.standUp.add(move);// Kne Right :90 deg.  Voltage required : 3 volts
         move = new int[]{10, 1, 75};           this.standUp.add(move);// Hip Left :90 deg.  Voltage required : 3 volts

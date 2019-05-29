@@ -121,8 +121,10 @@ public class Movement
     {
         Data dt = new Data();
         
-        for(int j=0;j<moveSeq.size();j++)
+        for(int j=0;j<movePositions.size();j++)
         {
+            moveSeq=(ArrayList)movePositions.get(j);
+
             for(int i=0;i<moveSeq.size();i++)
             {
 
@@ -134,6 +136,8 @@ public class Movement
         
     
     }
+    
+    
     private ArrayList synchroPair(ArrayList moveSeq)
     {
         Data dt = new Data();
